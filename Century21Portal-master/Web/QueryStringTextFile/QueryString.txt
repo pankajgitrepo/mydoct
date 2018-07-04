@@ -1,0 +1,87 @@
+﻿
+----------------------New record saved at: 22-05-2015 15:39:25----------------------
+t=2010:01:01:12:30
+w=12345
+a=98765
+x=Joe.Smith
+o=45454
+c=0001
+f=Joe
+z=c1beee00921da2210032b
+sid=ZF165AFD-¬‐0134-¬‐451A-¬‐8986-¬‐2ABE972539DZ
+
+----------------------New record saved at: 22-05-2015 15:39:56----------------------
+t=2010:01:01:12:30
+w=12345
+a=98765
+x=Joe.Smith
+o=45454
+c=0001
+f=Joe
+z=c1beee00921da2210032b
+sid=ZF165AFD-¬‐0134-¬‐451A-¬‐8986-¬‐2ABE972539DZ
+
+----------------------New record saved at: 22-05-2015 15:40:19----------------------
+t=2010:01:01:12:30
+w=12345
+a=98765
+x=Joe.Smith
+o=45454
+c=0001
+f=Joe
+z=c1beee00921da2210032b
+sid=ZF165AFD-¬‐0134-¬‐451A-¬‐8986-¬‐2ABE972539DZ
+
+----------------------New record saved at: 22-05-2015 15:53:57----------------------
+t=2010:01:01:12:30
+w=12345
+a=98765
+x=Joe.Smith
+o=45454
+c=0001
+f=Joe
+z=c1beee00921da2210032b
+sid=ZF165AFD-¬‐0134-¬‐451A-¬‐8986-¬‐2ABE972539DZ
+
+----------------------New record saved at: 22-05-2015 15:54:32----------------------
+t=2010:01:01:12:30
+w=12345
+a=98765
+x=Joe.Smith
+o=45454
+c=0001
+f=Joe
+z=c1beee00921da2210032b
+sid=ZF165AFD-¬‐0134-¬‐451A-¬‐8986-¬‐2ABE972539DZ
+----------------------New record saved at: 19/10/2015 11:00:39----------------------
+
+t:2015:10:16:20:44
+a:30354369
+x:stephanie.benusa@century21.com
+f:Stephanie
+r1:175 Park Avenue
+r2:
+k:Madison
+p:NJ
+l:07940
+m:United States
+n:Stephanie Benusa
+u:Century 21
+y:Content Administrator
+z:3866869d42e28d4a90e959e0994cb4ab
+----------------------New record saved at: 19/10/2015 11:18:39----------------------
+
+t:2015:10:16:20:44
+a:30354369
+x:stephanie.benusa@century21.com
+f:Stephanie
+r1:175 Park Avenue
+r2:
+k:Madison
+p:NJ
+l:07940
+m:United States
+n:Stephanie Benusa
+u:Century 21
+y:Content Administrator
+z:3866869d42e28d4a90e959e0994cb4ab
