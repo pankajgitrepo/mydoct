@@ -16613,6 +16613,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Data/Sites/1/skins/Theme_C21/theme.skin">
       <publishTime>02/07/2018 00:43:28</publishTime>
     </File>
+    <File Include="Data/Sites/1/skins/Theme_C21Mobile/images/loading_spinner.gif">
+      <publishTime>07/02/2018 00:43:28</publishTime>
+    </File>
+    <File Include="Data/Sites/1/skins/Theme_C21Mobile/images/loading_spinner1.gif">
+      <publishTime>07/02/2018 00:43:28</publishTime>
+    </File>
     <File Include="Data/skins/art42-blackngreen/ArtisteerWebDesign_468x60.gif">
       <publishTime>07/02/2018 00:43:28</publishTime>
     </File>
