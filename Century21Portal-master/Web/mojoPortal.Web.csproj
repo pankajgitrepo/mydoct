@@ -1580,9 +1580,11 @@
     <Content Include="Data\Sites\1\skins\art42-blue\images\vmenusubitemicon.png" />
     <Content Include="Data\Sites\1\skins\art42-blue\images\youtubeicon.png" />
     <Content Include="Data\Sites\1\skins\art42-blue\index.html" />
+    <Content Include="Data\Sites\1\skins\art42-blue\layout.Master" />
     <Content Include="Data\Sites\1\skins\art42-blue\script.js" />
     <Content Include="Data\Sites\1\skins\art42-blue\script.responsive.js" />
     <Content Include="Data\Sites\1\skins\art42-blue\style-artisteer-overrides.css" />
+    <Content Include="Data\Sites\1\skins\art42-blue\style.config" />
     <Content Include="Data\Sites\1\skins\art42-blue\style.css" />
     <Content Include="Data\Sites\1\skins\art42-blue\style.ie7.css" />
     <Content Include="Data\Sites\1\skins\art42-blue\style.responsive.css" />
@@ -1595,6 +1597,7 @@
     <Content Include="Data\Sites\1\skins\art42-blue\stylemojo.css" />
     <Content Include="Data\Sites\1\skins\art42-blue\styletreeview.css" />
     <Content Include="Data\Sites\1\skins\art42-blue\stylewebstore.css" />
+    <Content Include="Data\Sites\1\skins\art42-blue\theme.skin" />
     <Content Include="Data\Sites\1\skins\art42-businessblue2\ArtisteerWebDesign_468x60.gif" />
     <Content Include="Data\Sites\1\skins\art42-businessblue2\collapse.gif" />
     <Content Include="Data\Sites\1\skins\art42-businessblue2\draghandle.gif" />
@@ -5605,9 +5608,6 @@
     <Content Include="Data\Sites\1\skins\art42-blackngreen\layout.Master" />
     <Content Include="Data\Sites\1\skins\art42-blackngreen\style.config" />
     <Content Include="Data\Sites\1\skins\art42-blackngreen\theme.skin" />
-    <Content Include="Data\Sites\1\skins\art42-blue\layout.Master" />
-    <Content Include="Data\Sites\1\skins\art42-blue\style.config" />
-    <Content Include="Data\Sites\1\skins\art42-blue\theme.skin" />
     <Content Include="Data\Sites\1\skins\art42-bluebubbles\layout.Master" />
     <Content Include="Data\Sites\1\skins\art42-bluebubbles\style.config" />
     <Content Include="Data\Sites\1\skins\art42-bluebubbles\theme.skin" />
