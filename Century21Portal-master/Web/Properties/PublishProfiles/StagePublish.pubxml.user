@@ -16512,7 +16512,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/02/2018 00:43:28</publishTime>
     </File>
     <File Include="Data/Sites/1/skins/Theme_C21/courses.html">
-      <publishTime>02/07/2018 00:43:28</publishTime>
+      <publishTime>07/02/2018 00:43:28</publishTime>
     </File>
     <File Include="Data/Sites/1/skins/Theme_C21/expand.gif">
       <publishTime>07/02/2018 00:43:28</publishTime>
