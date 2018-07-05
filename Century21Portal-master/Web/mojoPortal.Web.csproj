@@ -2239,7 +2239,6 @@
     <Content Include="Data\Sites\1\skins\Theme_C21\script.js" />
     <Content Include="Data\Sites\1\skins\Theme_C21\script.responsive.js" />
     <Content Include="Data\Sites\1\skins\Theme_C21\style-artisteer-overrides.css" />
-    <Content Include="Data\Sites\1\skins\Theme_C21\style.css" />
     <Content Include="Data\Sites\1\skins\Theme_C21\style.ie7.css" />
     <Content Include="Data\Sites\1\skins\Theme_C21\style.responsive.css" />
     <Content Include="Data\Sites\1\skins\Theme_C21\style.responsive.old.css" />
