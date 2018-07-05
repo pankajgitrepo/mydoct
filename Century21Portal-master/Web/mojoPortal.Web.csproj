@@ -2211,6 +2211,7 @@
     <Content Include="Data\Sites\1\skins\Theme_C21\images\tab_arrow.png" />
     <Content Include="Data\Sites\1\skins\Theme_C21\images\template_preview.png" />
     <Content Include="Data\Sites\1\skins\Theme_C21\images\TheLearning_icon.png" />
+    <Content Include="Data\Sites\1\skins\Theme_C21\images\top-header.png" />
     <Content Include="Data\Sites\1\skins\Theme_C21\images\TopViewed.png" />
     <Content Include="Data\Sites\1\skins\Theme_C21\images\TopViewedOld.png" />
     <Content Include="Data\Sites\1\skins\Theme_C21\images\tumblricon.png" />
