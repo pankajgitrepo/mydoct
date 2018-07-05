@@ -2017,6 +2017,8 @@
     <Content Include="Data\Sites\1\skins\Theme_C21Mobile\images\likeicon_blue.png" />
     <Content Include="Data\Sites\1\skins\Theme_C21Mobile\images\likeicon_Gray.png" />
     <Content Include="Data\Sites\1\skins\Theme_C21Mobile\images\linkedinicon.png" />
+    <Content Include="Data\Sites\1\skins\Theme_C21Mobile\images\loading_spinner.gif" />
+    <Content Include="Data\Sites\1\skins\Theme_C21Mobile\images\loading_spinner1.gif" />
     <Content Include="Data\Sites\1\skins\Theme_C21Mobile\images\login_dropdown.png" />
     <Content Include="Data\Sites\1\skins\Theme_C21Mobile\images\logo-2.png" />
     <Content Include="Data\Sites\1\skins\Theme_C21Mobile\images\logo.png" />
