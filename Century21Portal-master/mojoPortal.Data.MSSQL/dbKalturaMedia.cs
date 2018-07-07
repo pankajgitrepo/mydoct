@@ -50,6 +50,18 @@ namespace mojoPortal.Data
             return sph.ExecuteReader();
         }
 
+
+
+        public static int DeleteFavouritesVideo(string mediaId, int userId)
+        {
+            SqlParameterHelper sph = new SqlParameterHelper(ConnectionString.GetReadConnectionString(), "USP_DEL_KalturaFavourite_ByUser", 2);
+            sph.DefineSqlParameter("@MediaID", SqlDbType.NVarChar, ParameterDirection.Input, mediaId);
+            sph.DefineSqlParameter("@UserID", SqlDbType.Int, ParameterDirection.Input, userId);
+            return sph.ExecuteNonQuery();
+        }
+
+
+
         public static IDataReader GetFavouritesVideoList(int userId)
         {
             SqlParameterHelper sph = new SqlParameterHelper(ConnectionString.GetReadConnectionString(), "Usp_KalturaMedia_GetFavouritesList", 1);

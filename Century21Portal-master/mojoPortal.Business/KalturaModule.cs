@@ -38,6 +38,12 @@ namespace mojoPortal.Business
             return dbKalturaMedia.SetLikesforKalturaMedia(mediaId, userId);
         }
 
+        public int DeleteFavouriteforKalturaMedia(string mediaId, int userId)
+        {
+            return dbKalturaMedia.DeleteFavouritesVideo(mediaId, userId);
+        }
+
+
         public int SetFavouritesforKalturaMedia(string mediaId, int userId)
         {
             return dbKalturaMedia.SetFavouritesforKalturaMedia(mediaId, userId);

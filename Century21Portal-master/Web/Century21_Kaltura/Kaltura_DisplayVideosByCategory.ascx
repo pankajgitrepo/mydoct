@@ -496,7 +496,7 @@
             var videoViews = result.plays;
             var timeDuration = msToTime(result.msDuration);
             element = document.getElementById("kaltura_media_by_category");
-            element.innerHTML += "<div class='constant picConstant'><div class='maindDivViewsAndLength'><div class='divViewsAndLengthOfVideo'><b><label class='views'><span>" + videoViews + "</span>  |  " + timeDuration + "</label></b></div></div><div class='divImageThumbnail'><a href='" + playVideoPageURL + "?mediaId=" + result.id + "&categoryName=" + categoryName + "'><img alt='" + result.name + "' src='" + result.thumbnailUrl + "/width/400/'/></a></div><br/><div class='divNameOfVideo'><label class='labelNameOfVideo'>" + result.name + "</label></div></div>";
+            element.innerHTML += "<div class='constant picConstant'><div class='maindDivViewsAndLength'><div class='divViewsAndLengthOfVideo'><b><label class='views'><span>" + videoViews + "</span>  |  " + timeDuration + "</label></b></div></div><div class='divImageThumbnail'><a href='" + playVideoPageURL + "?mediaId=" + result.id + "&categoryName=" + categoryName + "'><img alt='" + result.name + "' src='" + result.thumbnailUrl + "/width/400/'/></a></div><br/><div class='divNameOfVideo'><label class='labelNameOfVideo'><i class='fa fa-trash' aria-hidden='true' data='" + result.id + "'></i> " + result.name + "</label></div></div>";
         }
         function handleRecentAddedMediaInfo(result) {
             element = document.getElementById("kaltura_media_by_category");
