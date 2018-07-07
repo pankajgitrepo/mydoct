@@ -2127,6 +2127,7 @@
     <Content Include="Data\Sites\1\skins\Theme_C21\images\Calander12.png" />
     <Content Include="Data\Sites\1\skins\Theme_C21\images\commentsicon_Blue.png" />
     <Content Include="Data\Sites\1\skins\Theme_C21\images\commentsicon_Gray.png" />
+    <Content Include="Data\Sites\1\skins\Theme_C21\images\delete.png" />
     <Content Include="Data\Sites\1\skins\Theme_C21\images\desc.gif" />
     <Content Include="Data\Sites\1\skins\Theme_C21\images\detail.png" />
     <Content Include="Data\Sites\1\skins\Theme_C21\images\detials.png" />
