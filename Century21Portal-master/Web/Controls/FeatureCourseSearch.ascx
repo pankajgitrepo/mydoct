@@ -94,7 +94,7 @@
                                                                     </a>--%>
 
                                                         <a title='<%# Eval("CourseName").ToString()%>' href='<%#WebConfigSettings.CourseCommentsFeatureUrl+"?parentguid="+Eval("CourseGUID") %>' class="cblink">
-                                                            <img src="Data/Sites/1/skins/Theme_C21/images/commentsicon_Blue.png"></img>
+                                                            <img src="Data/Sites/1/skins/Theme_C21/images/commentsicon_Gray.png"></img>
 
                                                         </a>
 
@@ -105,7 +105,7 @@
                                                     </td>
                                                     <td style="text-align: center" class="tdNoBorder tdTextCenter">
                                                         <asp:ImageButton PostBackUrl='<%#"~/"+WebConfigSettings.CoursesUrl+"?act=lk&cid="+Eval("CourseId").ToString() %>' CommandName="SetLike" Enabled='<%# !(bool)Eval("LikeByThisUser")%>' CommandArgument='<%# Eval("CourseId").ToString()%>' ID="imgBtnLikes" runat="server" AlternateText="Like"
-                                                            ImageUrl='<%# (bool)Eval("LikeByThisUser") == true?WebConfigSettings.LikeGrayImageUrl:WebConfigSettings.LikeBlueImageUrl%>' />
+                                                            ImageUrl='<%# (bool)Eval("LikeByThisUser") == true?WebConfigSettings.LikeGrayImageUrl:WebConfigSettings.LikeGrayImageUrl%>' />
                                                         <br />
                                                         <span class="likes"><%# Eval("Likes").ToString()%>&nbsp;Likes</span></td>
                                                 </tr>

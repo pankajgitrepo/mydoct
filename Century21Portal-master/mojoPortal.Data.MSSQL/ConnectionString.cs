@@ -9,7 +9,7 @@ namespace mojoPortal.Data
         public static string GetReadConnectionString()
         {
             if (UseConnectionStringSection()) { return GetReadConnectionStringFromConnectionStringSection(); }
-
+            var x = ConfigurationManager.AppSettings["MSSQLConnectionString"];
             return ConfigurationManager.AppSettings["MSSQLConnectionString"];
 
         }

@@ -199,8 +199,8 @@
                                         <td style="width: 20%">--%>
                                                 <asp:DropDownList ID="ddlSortforGridSearch" CssClass="dropdown" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlSortforGridSearch_SelectedIndexChanged">
                                                     <asp:ListItem Text="--Sort by--" Value=""></asp:ListItem>
-                                                    <asp:ListItem Text="Course Title" Value="C"></asp:ListItem>
-                                                    <asp:ListItem Text="Instructor" Value="I"></asp:ListItem>
+                                                    <asp:ListItem Text="Title" Value="C"></asp:ListItem>
+                                                    <asp:ListItem Text="Audience" Value="A"></asp:ListItem>
                                                 </asp:DropDownList>
                                                 <%--                </ContentTemplate>
                                                 <Triggers>
@@ -338,7 +338,7 @@
                                                                     </a>--%>
 
                                                     <a title='<%# Eval("CourseName").ToString()%>' href='<%#WebConfigSettings.CourseCommentsFeatureUrl+"?parentguid="+Eval("CourseGUID") %>' class="cblink">
-                                                        <img src="Data/Sites/1/skins/Theme_C21/images/commentsicon_Blue.png"></img>
+                                                        <img src="Data/Sites/1/skins/Theme_C21/images/commentsicon_Gray.png"></img>
 
                                                     </a>
 
@@ -349,7 +349,7 @@
                                                 </td>
                                                 <td style="text-align: center" class="tdNoBorder tdTextCenter">
                                                     <asp:ImageButton PostBackUrl='<%#"~/"+WebConfigSettings.CoursesUrl+"?act=lk&cid="+Eval("CourseId").ToString() %>' CommandName="SetLike" Enabled='<%# !(bool)Eval("LikeByThisUser")%>' CommandArgument='<%# Eval("CourseId").ToString()%>' ID="imgBtnLikes" runat="server" AlternateText="Like"
-                                                        ImageUrl='<%# (bool)Eval("LikeByThisUser") == true?WebConfigSettings.LikeGrayImageUrl:WebConfigSettings.LikeBlueImageUrl%>' />
+                                                        ImageUrl='<%# (bool)Eval("LikeByThisUser") == true?WebConfigSettings.LikeGrayImageUrl:WebConfigSettings.LikeGrayImageUrl%>' />
                                                     <br />
                                                     <span class="likes"><%# Eval("Likes").ToString()%>&nbsp;Likes</span></td>
                                                 <%-- <td>
