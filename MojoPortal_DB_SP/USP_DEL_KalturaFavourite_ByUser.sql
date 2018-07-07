@@ -8,7 +8,7 @@ GO
 
 --[dbo].[USP_DEL_KalturaFavourite_ByUser] '1_ra8t8647', 1
 
-CREATE PROCEDURE [dbo].[USP_DEL_KalturaFavourite_ByUser] 
+ALTER PROCEDURE [dbo].[USP_DEL_KalturaFavourite_ByUser] 
 
 /*
 
@@ -21,24 +21,13 @@ Last Modified: 		08-07-2018
 */
 
 @MediaID nvarchar(20),
-
 @UserID int
 
-
-
 AS
-
-
-
 Declare @MediaGUID uniqueidentifier
-
-
-
-EXEC [dbo].[Usp_KalturaMedia_GetGuid] @MediaID, NULL
-
-
 
 SELECT @MediaGUID = [MediaGUID] FROM [dbo].[Usr_TblKalturaMediaMapping] WHERE [MediaID]=@MediaID;
 
 DELETE FROM [dbo].[Usr_TblKalturaUserFavourites]  WHERE  [dbo].[Usr_TblKalturaUserFavourites].MediaGUID = @MediaGUID AND [dbo].[Usr_TblKalturaUserFavourites].UserID = @UserID
+DELETE FROM [dbo].[Usr_TblKalturaMediaMapping] WHERE [MediaGUID]=@MediaGUID
 
