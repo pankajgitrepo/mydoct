@@ -1,0 +1,283 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/App_MasterPages/layout.Master.cs"
+    Inherits="mojoPortal.Web.layout" %>
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head id="Head1" runat="server">
+    <title></title>
+    <portal:MetaContent ID="MetaContent" runat="server" />
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+    <%-- JQueryUIThemeName valid options are: 
+	base, black-tie, blitzer, cupertino, dark-hive, dot-luv, eggplant, excite-bike, flick, hot-sneaks,
+	humanity, le-frog, mint-choc, overcast, pepper-grinder,
+	redmond, smoothness, south-street, start, sunny, swanky-purse, trontastic, ui-darkness, ui-lightness, vader
+    --%>
+    <link href="jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+    <portal:StyleSheetCombiner ID="StyleSheetCombiner" runat="server" JQueryUIThemeName="cupertino"
+        UseIconsForAdminLinks="false" UseTextLinksForFeatureSettings="true" />
+    <portal:IEStyleIncludes ID="IEStyleIncludes1" runat="server" IncludeHtml5Script="true"
+        IncludeIETransitionMeta="true" IE6CssFile="style.ie6.css" IE7CssFile="style.ie7.css" />
+    <portal:Favicon ID="Favicon1" runat="server" />
+    <portal:ScriptLoader ID="ScriptLoader1" runat="server" IncludeColorBox="true" />
+    <portal:SkinFolderScript ID="sfs1" runat="server" ScriptFileName="script.js" AddToCombinedScript="false" />
+    <portal:SkinFolderScript ID="sfs2" runat="server" ScriptFileName="script.responsive.js"
+        AddToCombinedScript="false" />
+    <portal:SkinFolderScript ID="sfs3" runat="server" ScriptFileName="jquery.mCustomScrollbar.concat.min.js"
+        AddToCombinedScript="false" />
+</head>
+<body class="pagebody" id="Body" runat="server">
+    <div id="fb-root">
+    </div>
+    <portal:AnalyticsAsyncTopScript ID="analyticsTop" runat="server" />
+    <portal:FacebookSdk ID="fbsdk" runat="server" />
+    <portal:LayoutDisplaySettings ID="LayoutDisplaySettings1" runat="server" />
+    <form id="frmMain" runat="server">
+    <asp:SiteMapDataSource ID="SiteMapData" runat="server" ShowStartingNode="false" />
+    <asp:SiteMapDataSource ID="PageMapDataSource" runat="server" ShowStartingNode="false" />
+    <asp:SiteMapDataSource ID="ChildPageSiteMapData" runat="server" ShowStartingNode="false" />
+    <asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server" EnableScriptGlobalization="true"
+        EnableScriptLocalization="true" />
+    <div id="art-main">
+        <div class="art-sheet clearfix">
+            <header>
+                
+                    <div class="art-shape-search">
+                    <div class="topnavwrap">
+                        <div  class="needHlptopnav">
+                        <portal:NeedHelpLink ID="NeedHelpLink1" runat="server" RenderAsListItem="true" /> 
+                        <li class="topnavitem" style="list-style:none;">|</li>
+                        <portal:T1OnlineLink ID="T1OnlineLink" runat="server" RenderAsListItem="true" /> 
+                            <li class="topnavitem" style="list-style:none;">|</li>
+                        <portal:RegistrationSiteLink ID="RegistrationSiteLink" runat="server" RenderAsListItem="true" />
+  
+                </div>
+                        <div class="searchtopnav" >
+                                <portal:SearchInput ID="SearchInputBox1" runat="server" LinkOnly="false" RenderAsListItem="false"
+                                    ImageUrl="skinbase_magnifier.png" ButtonCssClass="searchbutton" TextBoxCssClass="widetextbox" OverrideWatermark="Search..."
+                                    UseHeading="false" HideOnLoginPage="true" HideOnPasswordRecoveryPage="true" HideOnRegistrationPage="true"
+                                    HideOnSearchResultsPage="true" HideOnSiteSettingsPage="true" />
+                    
+                    
+                            </div>
+                
+<%--                <div  class="needHlptopnav">
+                <portal:NeedHelpLink ID="NeedHelpLink" runat="server" RenderAsListItem="true" />
+                </div>--%>
+                <div class="topnav" style="display:none">
+                
+                    <%--<ul>--%>
+
+                    <!-- <portal:HomeLink ID="HomeLink" runat="server" RenderAsListItem="true" />
+				<portal:MobileSkinLink ID="mobileskin" runat="server" RenderAsListItem="true" />
+				<portal:SiteMapLink ID="SiteMapLink2" runat="server" CssClass="sitelink" RenderAsListItem="true" />
+				<portal:SearchInput ID="SearchInput2" LinkOnly="True" RenderAsListItem="true" runat="server" /> 
+				<portal:MemberListLink ID="MemberListLink" runat="server" RenderAsListItem="true" />
+				<portal:MyPageLink ID="MyPageLink1" runat="server" RenderAsListItem="true" />
+				<portal:MailboxLink ID="MailboxLink1" runat="server" RenderAsListItem="true" />
+				<portal:RegisterLink ID="RegisterLink" runat="server" RenderAsListItem="true" />-->
+
+
+                    <%--                    <portal:ContactUS id="ContactUs" runat="server" RenderAsListItem="true" />
+                    <li class="topnavitem" <%--style="list-style:none;"--%><%-->|</li>----%>
+                    
+
+                    <%--	<portal:FAQLink id="FAQLink" runat="server" RenderAsListItem="true" />
+				<portal:ForumLink id="ForumLink" runat="server" RenderAsListItem="true" />
+				<portal:ResourcesLink id="ResourcesLink" runat="server" RenderAsListItem="true" />--%>
+                </div>
+            </div>
+                    </div>
+
+                    <div class="art-shapesbottom">
+                        <img class="imgLogo" src="" style="" alt="" />
+                        <%--<img src="/Data/Sites/1/skins/Theme_C21/images/logo-2.png" style="padding-left: 13px;" alt="" />--%>
+                        <%--<div>Where learning means business</div>--%>
+                    </div>
+                    <div class="art-shapes">
+                    </div>
+
+                    <h1 class="art-headline">
+                        <%--<portal:SiteTitle ID="SiteTitle" runat="server" IncludeStandardClasses="false" CssClass="art-headline"></portal:SiteTitle>--%>
+                        
+                    </h1>
+                    
+            <%--<div class="topnavwrap" style="margin-left: 14px; top: 8px; width: 0px;">
+                
+            </div>--%>
+                </header>
+            <% if (Request.IsAuthenticated)
+               { %>
+            <div class="topnavwrapsignin" style="top: 74px; margin-left: 900px;">
+                <% }
+               else
+               { %>
+                <div class="topnavwrapsignin" style="top: 93px; margin-left: 900px;">
+                    
+                    <% } %>
+                    <div class="topnav1">
+                        <%-- <portal:WelcomeMessage ID="WelcomeMessage" runat="server" RenderAsListItem="true" ListItemCss="firstnav" />
+                    <portal:UserProfileLink ID="UserProfileLink" runat="server" RenderAsListItem="true" />--%>
+                        <portal:LoginLink ID="LoginLink" runat="server" RenderAsListItem="true" />
+                        <portal:Century21_LogOut ID="Century21_LogOut" runat="server" RenderAsListItem="true" />
+                        <%-- <portal:LogoutLink ID="LogoutLink" runat="server" RenderAsListItem="true" />--%>
+                    </div>
+                </div>
+            </div>
+            <nav class="art-nav clearfix" style="margin-top: 6px;">
+                    <div class="art-nav-inner">
+                        <portal:SkipLink ID="SkipLink1" runat="server"></portal:SkipLink>
+                        <portal:SiteMenu ID="SiteMenu1" runat="server" UseFlexMenu="true" HideMenuOnSiteMap="false"></portal:SiteMenu>
+                    </div>
+                    
+                </nav>
+            <div class="art-layout-wrapper" style="display:block">
+                <div class="art-content-layout">
+                    <div class="art-content-layout-row">
+                        <portal:LayoutPanel ID="divLeft" runat="server" CssClass="art-layout-cell art-sidebar1 leftside"
+                            Visible="True" SkinID="pnlPlain">
+                            <portal:PageMenu ID="PageMenu1" runat="server" UseFlexMenu="true">
+                            </portal:PageMenu>
+                            <asp:ContentPlaceHolder ID="leftContent" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </portal:LayoutPanel>
+                        <portal:LayoutPanel ID="divCenter" runat="server" Visible="True" CssClass="center-rightandleftmargins"
+                            SkinID="pnlPlain">
+                            <portal:Breadcrumbs ID="Breadcrumbs" runat="server">
+                            </portal:Breadcrumbs>
+                            <portal:ChildPageMenu ID="ChildPageMenu" runat="server" CssClass="txtnormal"></portal:ChildPageMenu>
+                            <%--<div id="pageTitleId" class="pageTitleCss">
+                                <portal:PageTitle ID="pageTitle" runat="server"   />
+                                    </div>--%>
+                            <a id="startcontent"></a>
+                            <asp:ContentPlaceHolder ID="mainContent" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </portal:LayoutPanel>
+                        <portal:LayoutPanel ID="divRight" runat="server" Visible="True" CssClass="art-layout-cell art-sidebar2 rightside"
+                            SkinID="pnlPlain">
+                            <asp:ContentPlaceHolder ID="rightContent" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </portal:LayoutPanel>
+                    </div>
+                </div>
+            </div>
+        
+        <footer class="art-footer clearfix">
+                <div class="art-footer-body">
+                    <div class="art-footer-center">
+                        <div class="art-footer-wrapper">
+                            <a href="#" class="art-rss-tag-icon" style="float: left; line-height: 0px;" title="RSS"></a>
+
+                            <div class="art-footer-text art-footer-text-custom" style="clear:both" >
+                            <div class="socialftrlinks">
+                                <p>
+
+                                    <portal:JoinCentury21 ID="JoinCentury21" runat="server"></portal:JoinCentury21>
+                                    |
+                <%--<portal:OurMission ID="OurMission" runat="server"></portal:OurMission>
+                                    |--%>
+                <portal:Link ID="Link" runat="server"></portal:Link>
+                                    |
+                                    <portal:TermsOfUse ID="TermsOfUslink" runat="server"></portal:TermsOfUse>
+                                    <%--<portal:sitemaplink id="SiteMapLink1" runat="server" cssclass="sitemaplink"></portal:sitemaplink>
+				<portal:skinpreview id="SkinPreview1" runat="server"></portal:skinpreview>--%>
+                                    <%--|--%>
+                                    </p>
+                                    </div>
+                                    <div id="socialdiv" class= "footersocical"  >
+                                <%--    <portal:FooterFaceBook ID="FooterTwitter1" runat="server"></portal:FooterFaceBook>
+                                    <portal:FooterTwitter ID="TwitterFooter1" runat="server"></portal:FooterTwitter>--%>
+                                    
+                                    <%--<portal:FooterLinkedin ID="FooterLinkedin1" runat="server"></portal:FooterLinkedin>--%>
+                                    </div>
+                                    <%--<portal:FooterYouTube ID="FooterYouTube1" runat="server"></portal:FooterYouTube>--%>
+                                    <%--                                    <br />
+                                    <br />
+                                    <br />--%>
+                                
+
+                                <%--				|
+				<portal:mojoportallink id="lnkmojoportal" useimage="false" runat="server"></portal:mojoportallink>
+				| <a title="Learn about Artisteer" href="http://www.mojoportal.com/creating-skins-from-artisteer-html-templates.aspx">
+					Design generated by Artisteer</a></p>--%>
+                            </div>
+
+                            <div class="art-footer-disclaimer art-footer-disclaimer-custom">
+                                <p>
+                                    <portal:CopyrightLabel ID="cl1" runat="server" ShowYear="true" BeginYear="2015"></portal:CopyrightLabel>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cleared"></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script>        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=" + '<%=ConfigurationManager.AppSettings["FacebookAppId"].ToString() %>';
+            fjs.parentNode.insertBefore(js, fjs);
+        } (document, 'script', 'facebook-jssdk'));
+    </script>
+    <script type="text/javascript">
+        window.scrollTo(0, 0);
+        function HideMenuToolbar() { $("#toolbar").fadeOut(); $("#toolbarbut").fadeIn("slow"); }
+        function ShowMenuToolbar() { $("#toolbar").fadeIn(); $("#toolbarbut").fadeOut("slow"); }
+        $(document).ready(function () {
+            $("span.downarr a").click(function () { HideMenuToolbar(); Set_Cookie('openstate', 'closed') });
+            $("span.showbar a").click(function () { ShowMenuToolbar(); Set_Cookie('openstate', 'open') });
+            $("span.downarr a, span.showbar a").click(function () { return false; });
+            var openState = Get_Cookie('openstate');
+            if (openState != null) { if (openState == 'closed') { HideMenuToolbar(); } if (openState == 'open') { ShowMenuToolbar(); } }
+
+            $('.active-links').click(function () {
+                if ($('#signin-dropdown').is(":visible")) {
+                    $('#signin-dropdown').hide()
+                    $('#session').removeClass('active');
+                } else {
+                    $('#signin-dropdown').show()
+                    $('#session').addClass('active');
+                }
+                return false;
+            });
+            $('#signin-dropdown').click(function (e) {
+                e.stopPropagation();
+            });
+            $(document).click(function () {
+                $('#signin-dropdown').hide();
+                $('#session').removeClass('active');
+            });
+        });
+        if ((window.location.href.toLowerCase().indexOf("privacypolicy") > -1) || (window.location.href.toLowerCase().indexOf("login") > -1)) {
+            $("#pageTitleId").hide();
+        }
+    </script>
+    <portal:AutoHidePanel ID="ah1" runat="server">
+        <div id="toolbarbut">
+            <span class="showbar"><a href="#">show bar</a></span>
+        </div>
+        <div id="toolbar">
+            <div class="toolbarleft">
+                &nbsp;
+            </div>
+            <div class="toolbarright">
+                <span class="downarr"><a href="#"></a></span>
+                <portal:AdminMenuLink ID="lnkAdminMenu" runat="server" />
+                <portal:FileManagerLink ID="lnkFileManager" runat="server" />
+                <portal:NewPageLink ID="lnkNewPage" runat="server" />
+                <portal:PageEditFeaturesLink ID="lnkPageContent" runat="server" />
+                <portal:PageEditSettingsLink ID="lnkPageSettings" runat="server" />
+                <asp:ContentPlaceHolder ID="pageEditContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </portal:AutoHidePanel>
+    <div class="cleared">
+    </div>
+    <portal:Woopra ID="woopra11" runat="server" />
+    </form>
+    <portal:AnalyticsAsyncBottomScript ID="analyticsBottom" runat="server" />
+</body>
+</html>
