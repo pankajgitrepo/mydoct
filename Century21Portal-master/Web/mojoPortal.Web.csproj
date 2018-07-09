@@ -2145,6 +2145,7 @@
     <Content Include="Data\Sites\1\skins\Theme_C21\images\fav_icon.png" />
     <Content Include="Data\Sites\1\skins\Theme_C21\images\fav_iconOld.png" />
     <Content Include="Data\Sites\1\skins\Theme_C21\images\fav_icon_default.png" />
+    <Content Include="Data\Sites\1\skins\Theme_C21\images\footer.png" />
     <Content Include="Data\Sites\1\skins\Theme_C21\images\footerbullets.png" />
     <Content Include="Data\Sites\1\skins\Theme_C21\images\footerfacebookicon.png" />
     <Content Include="Data\Sites\1\skins\Theme_C21\images\footerrssicon.png" />
