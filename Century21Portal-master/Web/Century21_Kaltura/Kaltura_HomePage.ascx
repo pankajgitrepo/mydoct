@@ -98,7 +98,8 @@
     function handleSession(results) {
         client.setKs(results);
         var filter = new KalturaMediaEntryFilter();
-        filter.orderBy = "-recent";
+        //filter.orderBy = "-recent";
+        filter.orderBy = "-plays";
         filter.advancedSearch = new KalturaCategoryEntryAdvancedFilter();
         filter.categoriesIdsMatchAnd = String(categoryId);
         filter.mediaTypeEqual = KalturaMediaType.VIDEO;
@@ -121,9 +122,10 @@
                 flag++;
             }
             else if (flag > 0) {
+                var description = result.objects[i].description != undefined && result.objects[i].description != null && result.objects[i].description != "" ? result.objects[i].description : "No Description Found for this Video.";
                 var timeDuration = msToTime(result.objects[i].msDuration);
                 element = document.getElementById("kaltura_media_subtable");
-                element.innerHTML += "<tr><td class='tdHomePageVideoSubThumbnails'><a onclick=\"document.getElementById('myvideo').src='" + serviceUrl + "/p/" + partnerId + "/sp/" + partnerId + "00/embedIframeJs/uiconf_id/" + mediaPlayerId + "/partner_id/" + partnerId + "?iframeembed=true&playerId=divKaltura_play_Video&entry_id=" + result.objects[i].id + "'\" href='javascript:void(0);'><img alt='" + result.objects[i].name + "' src='" + result.objects[i].thumbnailUrl + "/width/120/'/><span class='video-time' aria-hidden='true'>" + timeDuration + "</span></a></td>" + "<td class='tdHomePageVideos'><a onclick=\"document.getElementById('myvideo').src='" + serviceUrl + "/p/" + partnerId + "/sp/" + partnerId + "00/embedIframeJs/uiconf_id/" + mediaPlayerId + "/partner_id/" + partnerId + "?iframeembed=true&playerId=divKaltura_play_Video&entry_id=" + result.objects[i].id + "'\" href='javascript:void(0)'>" + result.objects[i].name + "</a></td></tr>";
+                element.innerHTML += "<tr><td class='tdHomePageVideoSubThumbnails'><a onclick=\"document.getElementById('myvideo').src='" + serviceUrl + "/p/" + partnerId + "/sp/" + partnerId + "00/embedIframeJs/uiconf_id/" + mediaPlayerId + "/partner_id/" + partnerId + "?iframeembed=true&playerId=divKaltura_play_Video&entry_id=" + result.objects[i].id + "'\" href='javascript:void(0);'><img alt='" + result.objects[i].name + "' src='" + result.objects[i].thumbnailUrl + "/width/120/'/><span class='video-time' aria-hidden='true'>" + timeDuration + "</span></a></td>" + "<td class='tdHomePageVideos'><a onclick=\"document.getElementById('myvideo').src='" + serviceUrl + "/p/" + partnerId + "/sp/" + partnerId + "00/embedIframeJs/uiconf_id/" + mediaPlayerId + "/partner_id/" + partnerId + "?iframeembed=true&playerId=divKaltura_play_Video&entry_id=" + result.objects[i].id + "'\" href='javascript:void(0)'>" + result.objects[i].name + "</a><div class='vedioDescription'>" + description + "</div></td></tr>";
                 flag++;
             }
         }
