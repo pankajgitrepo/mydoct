@@ -12,19 +12,24 @@
                     <span class="switch-label" data-on="Most Recent" data-off="Alphabetical"></span>
                     <span class="switch-handle"></span>
                 </label>
-                <input type="button" id="uploadUGC" class="cbVideoIframe" value="Upload User Generated Content" style="display:none;" />
-                <a class="cbVideoIframe" id ="infoVideo" href="#" > Upload User Generated Content </a>
+                <input type="button" id="uploadUGC" class="cbVideoIframe" value="Upload User Generated Content" style="display: none;" />
+                <a class="cbVideoIframe" id="infoVideo" href="#">Upload User Generated Content </a>
             </div>
             <br />
             <div id="kaltura_media_by_category" class="mainwrapper">
             </div>
             <div id="kaltura_media_all_subcategories">
             </div>
-            <div id="errormsg" style="display:none;color:red;">
+            <div id="errormsg" style="display: none; color: red;">
                 There is no video associated with this subcategory.
             </div>
-            <div><asp:Label ID="lblNoFavourites" runat="server" Visible="false" CssClass="spanNameofVideo"></asp:Label></div>
+            <div>
+                <asp:Label ID="lblNoFavourites" runat="server" Visible="false" CssClass="spanNameofVideo"></asp:Label>
+            </div>
             <asp:HiddenField ID="mediaIdList" runat="server" Value="Default" ClientIDMode="Static"></asp:HiddenField>
+            <input type="hidden" runat="server" id="hidVidId" value="" />
+            <div style="display: none">
+                <asp:Button runat="server" ID="btnDelete" OnClick="btnDelete_Click" /></div>
         </portal:InnerBodyPanel>
         <%-- </portal:OuterBodyPanel>--%>
     </portal:InnerWrapperPanel>
@@ -292,7 +297,7 @@
                 document.getElementById("chkToggle").style.display = "none";
                 //var kSessionStart = client.session.start(onGetKalturaSessionSuccessforRecentAdded, secret, userId, type, parseInt(partnerId), parseInt(expiry), privileges);
                 var kSessionStart = client.session.start(onGetKalturaSessionSuccessforPlaylistRecentAdded, secret, userId, type, parseInt(partnerId), parseInt(expiry), privileges);
-                
+
             }
             else if (categoryId == -2) {
                 var header = $(".modulecontentForKaltura");
@@ -312,7 +317,7 @@
             filter.categoriesIdsMatchAnd = String(categoryId);
             filter.mediaTypeEqual = KalturaMediaType.VIDEO;
             filter.statusIn = String(2);
-            
+
             var pager = new KalturaFilterPager();
             pager.pageSize = parseInt(filterPageSize);
             var result = client.media.listAction(onGetMediaInfoSuccess, filter, pager);
@@ -362,54 +367,53 @@
                             }
                             //}
                         }
-                            //if (result.objects[i].depth == 3) { //added code by sandeepku on 4/23/2018
-                            //    if (result.objects[i].id == categoryId) {//categoryId) {
-                            //       // alert(i);
-                            //        //alert(" Depth 3 - 20653941 found commercial");
-                            //        if (result.objects[i].directSubCategoriesCount == 0) {
-                            //            privateCategoryIDs = [];// result.objects[i].fullIds;
-                            //            privateCategoryNames = []; //result.objects[i].fullName;
-                            //            flag++;
-                            //        }
-                            //        else {
-                            //            privateCategoryIDs[flag] = result.objects[i].fullIds;
-                            //            privateCategoryNames[flag] = result.objects[i].fullName;
-                            //            flag++;
-                            //        }
-                            //    }
-                            //}
+                        //if (result.objects[i].depth == 3) { //added code by sandeepku on 4/23/2018
+                        //    if (result.objects[i].id == categoryId) {//categoryId) {
+                        //       // alert(i);
+                        //        //alert(" Depth 3 - 20653941 found commercial");
+                        //        if (result.objects[i].directSubCategoriesCount == 0) {
+                        //            privateCategoryIDs = [];// result.objects[i].fullIds;
+                        //            privateCategoryNames = []; //result.objects[i].fullName;
+                        //            flag++;
+                        //        }
+                        //        else {
+                        //            privateCategoryIDs[flag] = result.objects[i].fullIds;
+                        //            privateCategoryNames[flag] = result.objects[i].fullName;
+                        //            flag++;
+                        //        }
+                        //    }
+                        //}
                     }
                 }
             }
             //debugger;
             for (var i = 0; i < privateCategoryIDs.length; i++) {
                 //if (categoryDepth == 4) {
-                
-                    var filter = new KalturaCategoryEntryFilter();
-                    filter.orderBy = "-recent"
-                    filter.advancedSearch = new KalturaCategoryEntryAdvancedFilter();
-                    if (result.totalCount > 0) {
-                        //filter.categoriesIdsMatchAnd = String(result.objects[i].id);
-                        filter.categoryFullIdsStartsWith = String(privateCategoryIDs[i]);
-                    }
-                    //if (result.totalCount > 0) {
-                    //    filter.categoriesIdsMatchAnd = String(categoryId);
-                    //}
-                    //filter.categoriesIdsMatchAnd = String(categoryId);
-                    //filter.parentIdEqual = String(categoryId);
-                    filter.mediaTypeEqual = KalturaMediaType.VIDEO;
-                    filter.statusIn = String(2);
 
-                    var pager = new KalturaFilterPager();
-                    pager.pageSize = parseInt(filterPageSize);
-                    //var results = client.media.listAction(onGetSubCategoryMediaInfoSuccess, filter, pager);
-                    var results = client.categoryEntry.listAction(onGetSubCategoryMediaInfoSuccess, filter, pager);
-                    //var results = client.category.listAction(onGetSubCategoryMediaInfoSuccess, filter, pager);
+                var filter = new KalturaCategoryEntryFilter();
+                filter.orderBy = "-recent"
+                filter.advancedSearch = new KalturaCategoryEntryAdvancedFilter();
+                if (result.totalCount > 0) {
+                    //filter.categoriesIdsMatchAnd = String(result.objects[i].id);
+                    filter.categoryFullIdsStartsWith = String(privateCategoryIDs[i]);
+                }
+                //if (result.totalCount > 0) {
+                //    filter.categoriesIdsMatchAnd = String(categoryId);
+                //}
+                //filter.categoriesIdsMatchAnd = String(categoryId);
+                //filter.parentIdEqual = String(categoryId);
+                filter.mediaTypeEqual = KalturaMediaType.VIDEO;
+                filter.statusIn = String(2);
+
+                var pager = new KalturaFilterPager();
+                pager.pageSize = parseInt(filterPageSize);
+                //var results = client.media.listAction(onGetSubCategoryMediaInfoSuccess, filter, pager);
+                var results = client.categoryEntry.listAction(onGetSubCategoryMediaInfoSuccess, filter, pager);
+                //var results = client.category.listAction(onGetSubCategoryMediaInfoSuccess, filter, pager);
                 //}
             }
             $('#errormsg').hide();
-            if (privateCategoryIDs.length == 0)
-            {
+            if (privateCategoryIDs.length == 0) {
                 //debugger;
                 if (categoryDepth == undefined)
                     $('#errormsg').show();
@@ -483,37 +487,39 @@
                 //channelName = result.objects[i].fullName;
                 //searchString = channelName.indexOf(privateChannelName);
                 //if (searchString != -1) {
-                    var videoViews = result.objects[i].plays;
-                    var timeDuration = msToTime(result.objects[i].msDuration);
-                    element = document.getElementById("kaltura_media_by_category");
-                    element.innerHTML += "<div class='constant picConstant'><div class='maindDivViewsAndLength'><div class='divViewsAndLengthOfVideo'><b><label class='views'><span>" + videoViews + "</span>  |  " + timeDuration + "</label></b></div></div><div class='divImageThumbnail'><a href='" + playVideoPageURL + "?mediaId=" + result.objects[i].id + "&categoryName=" + categoryName + "'><img alt='" + result.objects[i].name + "' src='" + result.objects[i].thumbnailUrl + "/width/400/'/></a></div><br/><div class='divNameOfVideo'><label class='labelNameOfVideo'>" + result.objects[i].name + "</label></div></div>";
+                var videoViews = result.objects[i].plays;
+                var timeDuration = msToTime(result.objects[i].msDuration);
+                element = document.getElementById("kaltura_media_by_category");
+                element.innerHTML += "<div class='constant picConstant'><div class='maindDivViewsAndLength'><div class='divViewsAndLengthOfVideo'><b><label class='views'><span>" + videoViews + "</span>  |  " + timeDuration + "</label></b></div></div><div class='divImageThumbnail'><a href='" + playVideoPageURL + "?mediaId=" + result.objects[i].id + "&categoryName=" + categoryName + "'><img alt='" + result.objects[i].name + "' src='" + result.objects[i].thumbnailUrl + "/width/400/'/></a></div><br/><div class='divNameOfVideo'><label class='labelNameOfVideo'>" + result.objects[i].name + "</label></div></div>";
                 //}
             }
         }
 
         function handleFavouriteMediaInfo(result) {
-            element = document.getElementById("kaltura_media_by_category");
-            var videoViews = result.plays;
-            var timeDuration = msToTime(result.msDuration);
-            element = document.getElementById("kaltura_media_by_category");
-            element.innerHTML += "<div class='constant picConstant'><div class='maindDivViewsAndLength'><div class='divViewsAndLengthOfVideo'><b><label class='views'><span>" + videoViews + "</span>  |  " + timeDuration + "</label></b></div></div><div class='divImageThumbnail'><a href='" + playVideoPageURL + "?mediaId=" + result.id + "&categoryName=" + categoryName + "'><img alt='" + result.name + "' src='" + result.thumbnailUrl + "/width/400/'/></a></div><br/><div class='divNameOfVideo'><label class='labelNameOfVideo'><input type='checkbox' class='chkDelete' data='" + result.id + "'/>" + result.name + "</label></div></div>";
+            if (result.id != $("[id$='hidVidId']").val()) {
+                element = document.getElementById("kaltura_media_by_category");
+                var videoViews = result.plays;
+                var timeDuration = msToTime(result.msDuration);
+                element = document.getElementById("kaltura_media_by_category");
+                element.innerHTML += "<div class='constant picConstant'><div class='maindDivViewsAndLength'><div class='divViewsAndLengthOfVideo'><b><label class='views'><span>" + videoViews + "</span>  |  " + timeDuration + "</label></b></div></div><div class='divImageThumbnail'><a href='" + playVideoPageURL + "?mediaId=" + result.id + "&categoryName=" + categoryName + "'><img alt='" + result.name + "' src='" + result.thumbnailUrl + "/width/400/'/></a></div><br/><div class='divNameOfVideo'><label class='labelNameOfVideo'>" + result.name + "</label></div><div><img class='delImg' data='" + result.id + "' src='data/sites/1/skins/Theme_C21/images/delete.png' style='height: 25px !important;width: 25px !important;float: right'/></div></div>";
+            }
         }
         function handleRecentAddedMediaInfo(result) {
             element = document.getElementById("kaltura_media_by_category");
 
-                var videoViews = resultNew.plays;
-                var timeDuration = msToTime(resultNew.msDuration);
-                element = document.getElementById("kaltura_media_by_category");
-                element.innerHTML += "<div class='constant picConstant'><div class='maindDivViewsAndLength'><div class='divViewsAndLengthOfVideo'><b><label class='views'><span>" + videoViews + "</span>  |  " + timeDuration + "</label></b></div></div><div class='divImageThumbnail'><a href='" + playVideoPageURL + "?mediaId=" + resultNew.id + "&categoryName=" + categoryName + "'><img alt='" + resultNew.name + "' src='" + resultNew.thumbnailUrl + "/width/400/'/></a></div><br/><div class='divNameOfVideo'><label class='labelNameOfVideo'>" + resultNew.name + "</label></div></div>";
+            var videoViews = resultNew.plays;
+            var timeDuration = msToTime(resultNew.msDuration);
+            element = document.getElementById("kaltura_media_by_category");
+            element.innerHTML += "<div class='constant picConstant'><div class='maindDivViewsAndLength'><div class='divViewsAndLengthOfVideo'><b><label class='views'><span>" + videoViews + "</span>  |  " + timeDuration + "</label></b></div></div><div class='divImageThumbnail'><a href='" + playVideoPageURL + "?mediaId=" + resultNew.id + "&categoryName=" + categoryName + "'><img alt='" + resultNew.name + "' src='" + resultNew.thumbnailUrl + "/width/400/'/></a></div><br/><div class='divNameOfVideo'><label class='labelNameOfVideo'>" + resultNew.name + "</label></div></div>";
         }
         function handleTopTenViewedMediaInfo(result) {
             element = document.getElementById("kaltura_media_by_category");
-            
-                var videoViews = result.plays;
-                var timeDuration = msToTime(result.msDuration);
-                element = document.getElementById("kaltura_media_by_category");
-                element.innerHTML += "<div class='constant picConstant'><div class='maindDivViewsAndLength'><div class='divViewsAndLengthOfVideo'><b><label class='views'><span>" + videoViews + "</span>  |  " + timeDuration + "</label></b></div></div><div class='divImageThumbnail'><a href='" + playVideoPageURL + "?mediaId=" + result.id + "&categoryName=" + categoryName + "'><img alt='" + result.name + "' src='" + result.thumbnailUrl + "/width/400/'/></a></div><br/><div class='divNameOfVideo'><label class='labelNameOfVideo'>" + result.name + "</label></div></div>";
-            
+
+            var videoViews = result.plays;
+            var timeDuration = msToTime(result.msDuration);
+            element = document.getElementById("kaltura_media_by_category");
+            element.innerHTML += "<div class='constant picConstant'><div class='maindDivViewsAndLength'><div class='divViewsAndLengthOfVideo'><b><label class='views'><span>" + videoViews + "</span>  |  " + timeDuration + "</label></b></div></div><div class='divImageThumbnail'><a href='" + playVideoPageURL + "?mediaId=" + result.id + "&categoryName=" + categoryName + "'><img alt='" + result.name + "' src='" + result.thumbnailUrl + "/width/400/'/></a></div><br/><div class='divNameOfVideo'><label class='labelNameOfVideo'>" + result.name + "</label></div></div>";
+
         }
         function handleMediaBasedOnSubCategory(result) {
             for (var i = 0; i < result.objects.length; i++) {
@@ -533,7 +539,7 @@
         }
 
         function handleAllCategories(result) {
-           
+
             var privateChannelName = '<%=ConfigurationManager.AppSettings["KalturaPrivateChannelFullName"].ToString() %>';
             var channelName = null;
             var searchString = null;
@@ -554,7 +560,7 @@
                     }
                 }
             }
-            
+
             flag = 0;
             //debugger;
             var filter = new KalturaCategoryEntryFilter();
@@ -584,7 +590,7 @@
 
 
         function handleSubCategoryMediaInfo(result) {
-            
+
             //debugger;
             if (categoryDepth === undefined && categoryDepth != 4) {
                 var uniqueName = result.objects.uniqueObjects(["categoryFullIds"]);
@@ -603,7 +609,7 @@
                 //    //var index = privateCategoryIDs.indexOf(result.objects[i].categoryFullIds.substring(0, result.objects[i].categoryFullIds.length - String(result.objects[i].categoryId).length - 1));
                 //    //var index = privateCategoryIDs.indexOf(result.objects[i].categoryFullIds);
                 //    var index = privateCategoryIDs.indexOf(result.objects[i].categoryFullIds);
-                    
+
                 //    if (index != -1) {
                 //        //if (result.objects[i].categoryId == categoryId) {
                 //            element = document.getElementById('kaltura_media_all_subcategories');
@@ -647,7 +653,7 @@
             });
         };
 
-        
+
         function msToTime(duration) {
             if (duration > 0) {
                 var milliseconds = parseInt((duration % 1000) / 100)
@@ -683,16 +689,15 @@
             header.addClass("modulecontentForKaltura");
             initialize_DisplayVideosByCategory('-recent');
             $("#uploadUGC").hide();
-            if (categoryId == 42109382)
-            {
+            if (categoryId == 42109382) {
                 $("#uploadUGC").show();
                 var src = "/upload-video";
 
                 $("#infoVideo").attr("href", src);
-                
+
                 //$(".cbVideoIframe").colorbox({ iframe: true, innerWidth: 600, innerHeight: 500 });
             }
-            
+
 
             //o
 
@@ -727,9 +732,9 @@
 
         function handleSessionPlayforRecentAdded(results) {
             client.setKs(results);
-            
+
             //debugger;
-            var id = '<%=ConfigurationManager.AppSettings["KalturaPlayListId"].ToString() %>'; 
+            var id = '<%=ConfigurationManager.AppSettings["KalturaPlayListId"].ToString() %>';
             var detailed = null;
             var playlistContext = null;
             var filter = new KalturaMediaEntryFilterForPlaylist();
@@ -748,5 +753,16 @@
                 element.innerHTML += "<div class='constant picConstant'><div class='maindDivViewsAndLength'><div class='divViewsAndLengthOfVideo'><b><label class='views'><span>" + videoViews + "</span>  |  " + timeDuration + "</label></b></div></div><div class='divImageThumbnail'><a href='" + playVideoPageURL + "?mediaId=" + result[i].id + "&categoryName=" + categoryName + "'><img alt='" + result[i].name + "' src='" + result[i].thumbnailUrl + "/width/400/'/></a></div><br/><div class='divNameOfVideo'><label class='labelNameOfVideo'>" + result[i].name + "</label></div></div>";
             }
         }
+
+        $(document).on('click', '.delImg', function () {
+            var id = this.attributes.data.nodeValue;
+            $("[id$='hidVidId']").val(id);
+            $("[id$='btnDelete']").click();
+            $(this).closest(".constant ").remove();
+        });
+
+
     </script>
+
+
 </portal:OuterWrapperPanel>

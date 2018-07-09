@@ -67,6 +67,24 @@ namespace mojoPortal.Web.Century21_Kaltura {
         protected global::System.Web.UI.WebControls.HiddenField mediaIdList;
         
         /// <summary>
+        /// hidVidId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden hidVidId;
+        
+        /// <summary>
+        /// btnDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDelete;
+        
+        /// <summary>
         /// cbottom1 control.
         /// </summary>
         /// <remarks>

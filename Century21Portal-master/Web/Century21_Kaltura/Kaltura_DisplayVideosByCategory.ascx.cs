@@ -55,5 +55,11 @@ namespace mojoPortal.Web.Century21_Kaltura
                 }
             }
         }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            string mediaId = hidVidId.Value;
+            (new KalturaModule()).DeleteFavouriteforKalturaMedia(mediaId, SiteUtils.GetCurrentSiteUser().UserId);
+        }
     }
 }
