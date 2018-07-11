@@ -13,13 +13,31 @@ namespace mojoPortal.Web.Century21HomePage {
     public partial class Century21HomePage {
         
         /// <summary>
-        /// C21KalturaPlayer control.
+        /// mdl119 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::mojoPortal.Web.Century21_Kaltura.Kaltura_HomePage C21KalturaPlayer;
+        protected global::mojoPortal.Web.ModuleWrapper mdl119;
+        
+        /// <summary>
+        /// mdl120 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::mojoPortal.Web.ModuleWrapper mdl120;
+        
+        /// <summary>
+        /// mdl121 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::mojoPortal.Web.ModuleWrapper mdl121;
         
         /// <summary>
         /// mdl100 control.
@@ -38,5 +56,14 @@ namespace mojoPortal.Web.Century21HomePage {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::mojoPortal.Web.CustomEventCalendar.HomePageEventsDisplay HomePageEventsDisplay;
+        
+        /// <summary>
+        /// C21KalturaPlayer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::mojoPortal.Web.Century21_Kaltura.Kaltura_HomePage C21KalturaPlayer;
     }
 }

@@ -114,10 +114,10 @@
             if (flag == 0) {
                 var src = serviceUrl + "/p/" + partnerId + "/sp/" + partnerId + "00/embedIframeJs/uiconf_id/" + mediaPlayerId + "/partner_id/" + partnerId + "?iframeembed=true&width=315&playerId=divKaltura_play_Video&entry_id=" + result.objects[i].id;
                 //$('#loading').show();
-                $('#loading').css('display', 'block');
+               // $('#loading').css('display', 'block');
                 element = document.getElementById("myvideo");
                 element.src = src;
-                $(".comp").css("width", "255px");
+              //  $(".comp").css("width", "255px");
                 //$("#videoName").text(result.objects[i].name)
                 flag++;
             }
@@ -128,6 +128,7 @@
                 element.innerHTML += "<tr><td class='tdHomePageVideoSubThumbnails'><a onclick=\"document.getElementById('myvideo').src='" + serviceUrl + "/p/" + partnerId + "/sp/" + partnerId + "00/embedIframeJs/uiconf_id/" + mediaPlayerId + "/partner_id/" + partnerId + "?iframeembed=true&playerId=divKaltura_play_Video&entry_id=" + result.objects[i].id + "'\" href='javascript:void(0);'><img alt='" + result.objects[i].name + "' src='" + result.objects[i].thumbnailUrl + "/width/120/'/><span class='video-time' aria-hidden='true'>" + timeDuration + "</span></a></td>" + "<td class='tdHomePageVideos'><a onclick=\"document.getElementById('myvideo').src='" + serviceUrl + "/p/" + partnerId + "/sp/" + partnerId + "00/embedIframeJs/uiconf_id/" + mediaPlayerId + "/partner_id/" + partnerId + "?iframeembed=true&playerId=divKaltura_play_Video&entry_id=" + result.objects[i].id + "'\" href='javascript:void(0)'>" + result.objects[i].name + "</a><div class='vedioDescription'>" + description + "</div></td></tr>";
                 flag++;
             }
+
         }
     }
     //comp titleLabel pull-left truncateText
@@ -178,8 +179,8 @@
     
     <div id='loading'><img src="Data/Sites/1/skins/Theme_C21/images/loading.gif" alt="Page is loading..." height="64" width="64"></div>
     <div class="divHomePageVideos" id="divKaltura_play_Video">
-        <iframe id="myvideo" src="#" frameborder="0" style="position: relative; height: 100%; width: 100%; display:none;"></iframe>
-        <a id="videoName" href="#"></a>
+        <iframe id="myvideo" src="#" frameborder="0" style="position: relative; height: 100%; width: 100%; display:inline-table;"></iframe>
+       <%-- <a id="videoName" href="#"></a>--%>
     </div>
     
     <br />
