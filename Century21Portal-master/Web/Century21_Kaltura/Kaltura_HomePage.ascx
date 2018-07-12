@@ -28,7 +28,7 @@
     .modal {
         display: none; /* Hidden by default */
         position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
+        z-index: 101; /* Sit on top */
         padding-top: 100px; /* Location of the box */
         left: 0;
         top: 0;
@@ -46,7 +46,7 @@
         margin: auto;
         padding: 0;
         border: 1px solid #888;
-        width: 50%;
+        width: 80%;
         
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
         -webkit-animation-name: animatetop;
@@ -96,17 +96,17 @@
         }
 
     .modal-header {
-        padding: 2px 16px;
+        padding: 5px 16px;
         background-color: #5cb85c;
         color: white;
     }
 
     .modal-body {
-        padding: 2px 16px;
+        padding: 5px 16px;
     }
 
     .modal-footer {
-        padding: 2px 16px;
+        padding: 5px 16px;
         background-color: #5cb85c;
         color: white;
     }
@@ -211,7 +211,7 @@
             var description = result.objects[i].description != undefined && result.objects[i].description != null && result.objects[i].description != "" ? result.objects[i].description : "No Description Found for this Video.";
             var timeDuration = msToTime(result.objects[i].msDuration);
             element = document.getElementById("kaltura_media_subtable");
-            element.innerHTML += "<tr><td class='tdHomePageVideoSubThumbnails myBtn' data='" + result.objects[i].name + "'><a onclick=\"document.getElementById('myvideo').src='" + serviceUrl + "/p/" + partnerId + "/sp/" + partnerId + "00/embedIframeJs/uiconf_id/" + mediaPlayerId + "/partner_id/" + partnerId + "?iframeembed=true&playerId=divKaltura_play_Video&entry_id=" + result.objects[i].id + "'\" href='javascript:void(0);'><img alt='" + result.objects[i].name + "' src='" + result.objects[i].thumbnailUrl + "/width/120/'/><span class='video-time' aria-hidden='true'>" + timeDuration + "</span></a></td>" + "<td class='tdHomePageVideos'><a onclick=\"document.getElementById('myvideo').src='" + serviceUrl + "/p/" + partnerId + "/sp/" + partnerId + "00/embedIframeJs/uiconf_id/" + mediaPlayerId + "/partner_id/" + partnerId + "?iframeembed=true&playerId=divKaltura_play_Video&entry_id=" + result.objects[i].id + "'\" href='javascript:void(0)'>" + result.objects[i].name + "</a><div class='vedioDescription'>" + description + "</div></td></tr>";
+            element.innerHTML += "<tr><td class='tdHomePageVideoSubThumbnails myBtn' data='" + result.objects[i].name + "'><a onclick=\"document.getElementById('myvideo').src='" + serviceUrl + "/p/" + partnerId + "/sp/" + partnerId + "00/embedIframeJs/uiconf_id/" + mediaPlayerId + "/partner_id/" + partnerId + "?iframeembed=true&playerId=divKaltura_play_Video&entry_id=" + result.objects[i].id + "'\" href='javascript:void(0);'><img alt='" + result.objects[i].name + "' src='" + result.objects[i].thumbnailUrl + "/width/1000/'/><span class='video-time' aria-hidden='true'>" + timeDuration + "</span></a></td>" + "<td class='tdHomePageVideos'><a onclick=\"document.getElementById('myvideo').src='" + serviceUrl + "/p/" + partnerId + "/sp/" + partnerId + "00/embedIframeJs/uiconf_id/" + mediaPlayerId + "/partner_id/" + partnerId + "?iframeembed=true&playerId=divKaltura_play_Video&entry_id=" + result.objects[i].id + "'\" href='javascript:void(0)'>" + result.objects[i].name + "</a><div class='vedioDescription'>" + description + "</div></td></tr>";
             flag++;
             //}
 
@@ -253,6 +253,7 @@
 </script>
 
 <script>
+    $('#myvideo').hide();
     $(document).on("click", ".myBtn", function () {
         var modal = $("#myModal");
         $(modal).css({ display: "block" });
@@ -264,7 +265,7 @@
     $(document).on("click", ".close", function () {
         var modal = $("#myModal");
         $(modal).css({ display: "none" });
-        $('#myvideo').attr('src', '#');
+        $('#myvideo').attr('src', 'blank.html');
     });
 </script>
 
@@ -291,7 +292,7 @@
         </div>
         <div class="modal-body">
             <div class="divHomePageVideos" id="divKaltura_play_Video">
-                <iframe id="myvideo" src="#" frameborder="0" style="position: relative; height: 100%; width: 100%; display: inline-table;"></iframe>
+                <iframe id="myvideo" src="blank.html" frameborder="0" style="position: relative; height: 100%; width: 100%; display: inline-table;"></iframe>
             </div>
         </div>
         <div class="modal-footer">

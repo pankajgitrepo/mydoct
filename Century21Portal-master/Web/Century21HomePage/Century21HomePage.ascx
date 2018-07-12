@@ -22,7 +22,7 @@
     }
 
     .divHomePageVideos {
-        height: 350px !important;
+        height: 400px !important;
         width: 100% !important;
         padding-left: 1px !important;
     }
@@ -41,7 +41,60 @@
             .fullWidth tbody tr td img {
                 width: 100%;
             }
+
+            /* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .art-layout-wrapper {
+  padding-top: 150px;
+}
+
+    .art-layout-wrapper {
+        margin: -35px auto !important;
+    }
+    .nivo-controlNav{
+        display:none;
+        z-index:99 !important;
+    }
 </style>
+
+
+<script>
+$(".art-sheet").attr("id","myHeader");
+$(".art-nav").attr("id","myHeader1");
+$(".art-layout-wrapper").attr("id","content");
+
+$('<div/>', {
+    id: 'headerNav',
+    style:'z-index:100'
+}).insertBefore('#content');
+
+$("#headerNav").append($("#myHeader"));
+$("#headerNav").append($("#myHeader1"));
+
+
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("headerNav");
+
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+	
+  } else {
+    header.classList.remove("sticky");
+	
+  }
+}
+</script>
+
+
 
 
 <script>
@@ -146,8 +199,8 @@
     </div>
 </div>
 
-<div class="homepagetablepadding theme-default" style="padding-top: 50px;">
-    <div class="divPathwayH">
+<div class="homepagetablepadding theme-default" style="padding-top: 10px;">
+    <div class="divnh">
         <div class="salesAssoheader">
             <div>Sales Assocoate Pathway</div>
         </div>
@@ -157,7 +210,7 @@
             </div>
         </div>
     </div>
-    <div class="divleaderShipH">
+    <div class="divnh">
         <div class="leaderShipheader">
             <div>Leadership Pathway</div>
         </div>
@@ -167,7 +220,7 @@
             </div>
         </div>
     </div>
-    <div class="divnh" style="width: 33%;">
+    <div class="divnh" style="width: 34%;">
         <div class="watchheader">
             <div>Trainer Pathway</div>
         </div>
@@ -179,105 +232,26 @@
     </div>
 </div>
 
-<%--<div class="art-footer-back"></div>--%>
+
 <div class="homepagetablepadding" style="padding-top: 15px;">
-
-    <div class="divse">
-        <div class="socialeventsTabs">
-
-            <ul class="tabs-menu">
-                <li id="li1" class="current socicalfeed">
-                    <div class="socialFeedDivTitle"><%= Resources.Resource.Century21HomePageEventNews %></div>
-                </li>
-                <%--                        <li id="li2" class="eventsfeed">
-                            <div><%= Resources.Resource.Century21HomePageEventEvents %></div>
-                        </li>--%>
-            </ul>
-            <div class="HoemPageEventsSocial" id="HMPgEvtScl">
-                <div id="wrapper">
-                    <div id="leftcolumn">
-                        <div class="activeFBTabImageIndicator" id="FBTabActiveIndication">
-                            <%--<img class="" src="Data/Sites/1/skins/Theme_C21/images/tab_arrow.png" alt="" />--%>
-                        </div>
-                    </div>
-                    <%--                        <div id="rightcolumn">
-                            <div class="activeEvtsTabImageIndicator" id="eventsTabActiveIndication">
-                                <img class="" src="Data/Sites/1/skins/Theme_C21/images/tab_arrow.png" alt="" />
-                            </div>
-                        </div>--%>
-                </div>
-                <div style="clear: both;"></div>
-                <div id="tabs-container" class="newseventscontent" style="width: 100%; float: left;">
-                    <div class="tab" style="width: 100%;">
-                        <div id="tab-1" class="tab-content" style="width: 100%;">
-                            <%--commented on 20180419--%>
-                            <%--<div style="text-align: center;width:100%; ">
-                                    <img style="margin-top: 10px;" src="Data/Sites/1/skins/Theme_C21/images/TheLearning_icon.png" alt="" />
-                                </div>--%>
-                            <%--commented on 20180419--%>
-
-                            <div id="newsContent" class="" style="color: black; width: 100%; margin-top: 2px; overflow-y: scroll!important; height: 378px;">
-
-                                <portal:ModuleWrapper ID="mdl100" runat="server" ConfigureModuleId="100" />
-                            </div>
-                        </div>
-                        <div id="tab-2" class="tab-content" style="width: 100%;">
-                            <portal:HomePageEventsDisplay runat="server" ID="HomePageEventsDisplay" />
-                        </div>
-                    </div>
-                </div>
-
-                <script>
-                    $(document).ready(function () {
-
-                        //$(".tabs-menu li").click(function () {
-                        //    var tab = $(this).children().children().attr("href");
-                        //    $(".tab-content").not(tab).css("display", "none");
-                        //    $(tab).fadeIn();
-                        //    if (this.id == "li1") {
-                        //        $("#eventsTabActiveIndication").css('display', 'none');
-                        //        $("#FBTabActiveIndication").css('display', 'block');
-                        //        $("#tab-1").css('display', 'block');
-                        //        //$("#li1").css('background-color', '#eeb443');
-                        //        //$("#li2").css('background-color', '#e1a838');
-                        //    }
-                        //    else if (this.id == "li2") {
-                        //        //$("#li1").css('background-color', '#e1a838');
-                        //        //$("#li2").css('background-color', '#eeb443');
-                        //        $("#tab-2").css('display', 'block');
-                        //        $("#FBTabActiveIndication").css('display', 'none');
-                        //        $("#eventsTabActiveIndication").css('display', 'block');
-                        //    }
-                        //});
-                    });
-                    </script>
-                <%--                    <script>
-                        //(function ($) {
-                        //    $(window).load(function () {
-                        //        $.mCustomScrollbar.defaults.scrollButtons.enable = true;
-                        //        $(".divHomePageVideosWithNames").mCustomScrollbar({ theme: "dark" });
-                        //        $(".eventscrollable").mCustomScrollbar({ theme: "dark" });
-                        //    });
-                        //})(jQuery);
-                    </script>--%>
+    <div class="divnh">
+        <div class="watchheader">
+            <%--<%= Resources.Resource.Century21HomePageEventNews %>--%>
+            <div>Upcoming webinars</div>
+        </div>
+        <div style="width: 100%;">
+            <div style="width: 100%; height: 200px; overflow: auto">
+                <portal:ModuleWrapper ID="ModuleWrapper1" runat="server" ConfigureModuleId="121" />
             </div>
         </div>
     </div>
+    
     <div class="divnh" style="">
         <div class="newsheader">
-            <div><%= Resources.Resource.Century21HomePageEventSocial %></div>
+            <%--<%= Resources.Resource.Century21HomePageEventSocial %>--%>
+            <div>C21 Workplace</div>
         </div>
         <div class="HomePageNewsFeed newseventscontent" style="width: 100%;">
-
-            <%--<iframe id="fbContent" src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FC21University&width=309&colorscheme=light&show_faces=true&stream=true&header=false&height=459&show_border=false&show_footer=false" scrolling="no" frameborder="0" style="border: none !important; background:#F0F0F0 !important; overflow-y: hidden; height: 459px; width: 332px; float: left;" allowtransparency="true"></iframe>--%>
-            <%--                    <div class="fb-page" data-href="https://www.facebook.com/C21University" data-width="340" data-height="450" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false" data-show-posts="true">
-                        <div class="fb-xfbml-parse-ignore">
-                            <blockquote cite="https://www.facebook.com/C21University">
-                                <a href="https://www.facebook.com/C21University">C21 University</a>
-                            </blockquote>
-                        </div>
-                    </div>--%>
-
             <div class="fb-page" data-href="https://www.facebook.com/century21" data-width="340" data-height="450" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false" data-show-posts="true">
                 <div class="fb-xfbml-parse-ignore">
                     <blockquote cite="https://www.facebook.com/century21">
@@ -295,28 +269,53 @@
                 });
             </script>--%>
     </div>
-    <div class="divnh" style="width: 33%;">
-        <div class="watchheader">
-            <div>C21 University News</div>
-        </div>
-        <div style="width: 100%;">
-            <div style="width: 100%; height: 200px; overflow: auto">
-                <portal:ModuleWrapper ID="ModuleWrapper1" runat="server" ConfigureModuleId="121" />
+    
+    <div class="divnh"  style="width: 34%;">
+        <div class="socialeventsTabs">
+
+            <ul class="tabs-menu">
+                <li id="li1" class="current socicalfeed">
+                    <div class="socialFeedDivTitle">C21 University News</div>
+                </li>
+            </ul>
+            <div class="HoemPageEventsSocial" id="HMPgEvtScl">
+                <div id="wrapper">
+                    <div id="leftcolumn">
+                        <div class="activeFBTabImageIndicator" id="FBTabActiveIndication">
+                        </div>
+                    </div>
+
+                </div>
+                <div style="clear: both;"></div>
+                <div id="tabs-container" class="newseventscontent" style="width: 100%; float: left;">
+                    <div class="tab" style="width: 100%;">
+                        <div id="tab-1" class="tab-content" style="width: 100%;">
+
+                            <div id="newsContent" class="" style="color: black; width: 100%; margin-top: 2px; overflow-y: scroll!important; height: 378px;">
+
+                                <portal:ModuleWrapper ID="mdl100" runat="server" ConfigureModuleId="100" />
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-content" style="width: 100%;">
+                            <portal:HomePageEventsDisplay runat="server" ID="HomePageEventsDisplay" />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
 </div>
 <div class="divwh" style="">
-        <div class="watchheader">
-            <div><%= Resources.Resource.Century21HomePageEventWatch %></div>
-        </div>
-        <div class="HomePagetrData" style="width: 100%;">
-            <div class="HomePageKalturaSection" style="width: 100%;">
-                <div style="width: 100%;">
-                    <Century21:KalturaVideoPlayer runat="server" ID="C21KalturaPlayer" />
-                </div>
-            </div>
-
-        </div>
+    <div class="watchheader">
+        <div><%= Resources.Resource.Century21HomePageEventWatch %></div>
     </div>
+    <div class="HomePagetrData" style="width: 100%;">
+        <div class="HomePageKalturaSection" style="width: 100%;">
+            <div style="width: 100%;">
+                <Century21:KalturaVideoPlayer runat="server" ID="C21KalturaPlayer" />
+            </div>
+        </div>
+
+    </div>
+</div>
