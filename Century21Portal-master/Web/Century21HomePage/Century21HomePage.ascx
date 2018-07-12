@@ -7,37 +7,40 @@
     /*.clearfix .pvs. phm {
         display: none;
     }*/
-    .divwh
-    {
-            width: 100%;
+    .divwh {
+        width: 100%;
     }
+
     .divVideos {
-    padding-top: 10px!important;
-    width: 100%!important;
-    display: flex;
-}
+        padding-top: 10px !important;
+        width: 100% !important;
+        display: flex;
+    }
+
     .fullWidth tbody {
-        display:flex;
+        display: flex;
     }
+
     .divHomePageVideos {
-    height: 200px!important;
-    width: 25%!important;
-    padding-left: 1px!important;
-}
-      .fullWidth tbody tr{
-            width: 33%;
+        height: 350px !important;
+        width: 100% !important;
+        padding-left: 1px !important;
     }
-      .fullWidth tbody tr td
-      {
-                width: 80%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-      }
-      .fullWidth tbody tr td img
-      {
-          width:100%;
-      }
+
+    .fullWidth tbody tr {
+        width: 33%;
+    }
+
+        .fullWidth tbody tr td {
+            width: 80%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+            .fullWidth tbody tr td img {
+                width: 100%;
+            }
 </style>
 
 
@@ -143,37 +146,37 @@
     </div>
 </div>
 
-<div class="homepagetablepadding theme-default"  style="padding-top: 50px;">
-    <div class="divPathwayH">       
-       <div class="salesAssoheader">
+<div class="homepagetablepadding theme-default" style="padding-top: 50px;">
+    <div class="divPathwayH">
+        <div class="salesAssoheader">
             <div>Sales Assocoate Pathway</div>
         </div>
-            <div style="width:100%;">
-                <div style="width: 100%;height:190px; overflow:auto">
-                   <portal:ModuleWrapper ID="mdl119" runat="server" ConfigureModuleId="119" />
-                </div>
-            </div>        
+        <div style="width: 100%;">
+            <div style="width: 100%; height: 190px; overflow: auto">
+                <portal:ModuleWrapper ID="mdl119" runat="server" ConfigureModuleId="119" />
+            </div>
+        </div>
     </div>
     <div class="divleaderShipH">
-              <div class="leaderShipheader">
+        <div class="leaderShipheader">
             <div>Leadership Pathway</div>
         </div>
-            <div style="width:100%;">
-                <div style="width: 100%; height:190px; overflow:auto">
-                   <portal:ModuleWrapper ID="mdl120" runat="server" ConfigureModuleId="120" />
-                </div>
-            </div> 
+        <div style="width: 100%;">
+            <div style="width: 100%; height: 190px; overflow: auto">
+                <portal:ModuleWrapper ID="mdl120" runat="server" ConfigureModuleId="120" />
+            </div>
         </div>
-         <div class="divnh"  style="width:33%;">
-             <div class="watchheader">
+    </div>
+    <div class="divnh" style="width: 33%;">
+        <div class="watchheader">
             <div>Trainer Pathway</div>
         </div>
-            <div style="width:100%;">
-                <div style="width: 100%; height:200px; overflow:auto">
-                 <portal:ModuleWrapper ID="mdl121" runat="server" ConfigureModuleId="121" />
-                </div>
-            </div> 
+        <div style="width: 100%;">
+            <div style="width: 100%; height: 200px; overflow: auto">
+                <portal:ModuleWrapper ID="mdl121" runat="server" ConfigureModuleId="121" />
+            </div>
         </div>
+    </div>
 </div>
 
 <%--<div class="art-footer-back"></div>--%>
@@ -292,7 +295,19 @@
                 });
             </script>--%>
     </div>
-        <div class="divwh" style="">
+    <div class="divnh" style="width: 33%;">
+        <div class="watchheader">
+            <div>Trainer Pathway</div>
+        </div>
+        <div style="width: 100%;">
+            <div style="width: 100%; height: 200px; overflow: auto">
+                <portal:ModuleWrapper ID="ModuleWrapper1" runat="server" ConfigureModuleId="121" />
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="divwh" style="">
         <div class="watchheader">
             <div><%= Resources.Resource.Century21HomePageEventWatch %></div>
         </div>
@@ -305,5 +320,3 @@
 
         </div>
     </div>
-
-</div>

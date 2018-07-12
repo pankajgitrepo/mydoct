@@ -6,22 +6,112 @@
     display: none;
 }*/
 
-#loading {
-    /*width: 300px;
+    #loading {
+        /*width: 300px;
     padding: 20px;
     background: orange;
     color: white;*/
-    text-align: center;
-    margin: 0 auto;
-    display: none;
-}
-.truncateText {
+        text-align: center;
+        margin: 0 auto;
+        display: none;
+    }
 
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    display: block;
+    .truncateText {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: block;
+    }
 
-}
+
+
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        border: 1px solid #888;
+        width: 50%;
+        
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s;
+    }
+
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+        from {
+            top: -300px;
+            opacity: 0;
+        }
+
+        to {
+            top: 0;
+            opacity: 1;
+        }
+    }
+
+    @keyframes animatetop {
+        from {
+            top: -300px;
+            opacity: 0;
+        }
+
+        to {
+            top: 0;
+            opacity: 1;
+        }
+    }
+
+    /* The Close Button */
+    .close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    .modal-header {
+        padding: 2px 16px;
+        background-color: #5cb85c;
+        color: white;
+    }
+
+    .modal-body {
+        padding: 2px 16px;
+    }
+
+    .modal-footer {
+        padding: 2px 16px;
+        background-color: #5cb85c;
+        color: white;
+    }
+
+    
 
 </style>
 <script type="text/javascript">
@@ -111,23 +201,19 @@
 
     function handleMediaInfo(result) {
         for (var i = 0; i < result.objects.length; i++) {
-            if (flag == 0) {
-                var src = serviceUrl + "/p/" + partnerId + "/sp/" + partnerId + "00/embedIframeJs/uiconf_id/" + mediaPlayerId + "/partner_id/" + partnerId + "?iframeembed=true&width=315&playerId=divKaltura_play_Video&entry_id=" + result.objects[i].id;
-                //$('#loading').show();
-               // $('#loading').css('display', 'block');
-                element = document.getElementById("myvideo");
-                element.src = src;
-              //  $(".comp").css("width", "255px");
-                //$("#videoName").text(result.objects[i].name)
-                flag++;
-            }
-            else if (flag > 0) {
-                var description = result.objects[i].description != undefined && result.objects[i].description != null && result.objects[i].description != "" ? result.objects[i].description : "No Description Found for this Video.";
-                var timeDuration = msToTime(result.objects[i].msDuration);
-                element = document.getElementById("kaltura_media_subtable");
-                element.innerHTML += "<tr><td class='tdHomePageVideoSubThumbnails'><a onclick=\"document.getElementById('myvideo').src='" + serviceUrl + "/p/" + partnerId + "/sp/" + partnerId + "00/embedIframeJs/uiconf_id/" + mediaPlayerId + "/partner_id/" + partnerId + "?iframeembed=true&playerId=divKaltura_play_Video&entry_id=" + result.objects[i].id + "'\" href='javascript:void(0);'><img alt='" + result.objects[i].name + "' src='" + result.objects[i].thumbnailUrl + "/width/120/'/><span class='video-time' aria-hidden='true'>" + timeDuration + "</span></a></td>" + "<td class='tdHomePageVideos'><a onclick=\"document.getElementById('myvideo').src='" + serviceUrl + "/p/" + partnerId + "/sp/" + partnerId + "00/embedIframeJs/uiconf_id/" + mediaPlayerId + "/partner_id/" + partnerId + "?iframeembed=true&playerId=divKaltura_play_Video&entry_id=" + result.objects[i].id + "'\" href='javascript:void(0)'>" + result.objects[i].name + "</a><div class='vedioDescription'>" + description + "</div></td></tr>";
-                flag++;
-            }
+            //if (flag == 0) {
+            //    var src = serviceUrl + "/p/" + partnerId + "/sp/" + partnerId + "00/embedIframeJs/uiconf_id/" + mediaPlayerId + "/partner_id/" + partnerId + "?iframeembed=true&width=315&playerId=divKaltura_play_Video&entry_id=" + result.objects[i].id;
+            //    element = document.getElementById("myvideo");
+            //    element.src = src;
+            //    flag++;
+            //}
+            //else if (flag > 0) {
+            var description = result.objects[i].description != undefined && result.objects[i].description != null && result.objects[i].description != "" ? result.objects[i].description : "No Description Found for this Video.";
+            var timeDuration = msToTime(result.objects[i].msDuration);
+            element = document.getElementById("kaltura_media_subtable");
+            element.innerHTML += "<tr><td class='tdHomePageVideoSubThumbnails myBtn' data='" + result.objects[i].name + "'><a onclick=\"document.getElementById('myvideo').src='" + serviceUrl + "/p/" + partnerId + "/sp/" + partnerId + "00/embedIframeJs/uiconf_id/" + mediaPlayerId + "/partner_id/" + partnerId + "?iframeembed=true&playerId=divKaltura_play_Video&entry_id=" + result.objects[i].id + "'\" href='javascript:void(0);'><img alt='" + result.objects[i].name + "' src='" + result.objects[i].thumbnailUrl + "/width/120/'/><span class='video-time' aria-hidden='true'>" + timeDuration + "</span></a></td>" + "<td class='tdHomePageVideos'><a onclick=\"document.getElementById('myvideo').src='" + serviceUrl + "/p/" + partnerId + "/sp/" + partnerId + "00/embedIframeJs/uiconf_id/" + mediaPlayerId + "/partner_id/" + partnerId + "?iframeembed=true&playerId=divKaltura_play_Video&entry_id=" + result.objects[i].id + "'\" href='javascript:void(0)'>" + result.objects[i].name + "</a><div class='vedioDescription'>" + description + "</div></td></tr>";
+            flag++;
+            //}
 
         }
     }
@@ -156,16 +242,7 @@
 
     $(document).ready(function () {
         initialize_DisplayVideosByCategory();
-
-        var iFrame = $('#myvideo');
-        iFrame.bind('load', function () { //binds the event
-            $('#loading').css('display', 'none');
-            $('#myvideo').css('display', 'block');
-            
-            //$('#myvideo').show();
-        });
-        //$(".comp.titleLabel.pull-left.truncateText").css("width", "255px!important");
-        $(".truncateText").css({ 'width': 'auto' });
+       // $(".truncateText").css({ 'width': 'auto' });
     });
 
     window.onload = setTimeout(function () {
@@ -175,20 +252,53 @@
 
 </script>
 
+<script>
+    $(document).on("click", ".myBtn", function () {
+        var modal = $("#myModal");
+        $(modal).css({ display: "block" });
+        var vedioName = $(this)[0].attributes.data.nodeValue;
+        $("#modalHeader").text(vedioName);
+        $(this).find("a").click();
+    });
+
+    $(document).on("click", ".close", function () {
+        var modal = $("#myModal");
+        $(modal).css({ display: "none" });
+        $('#myvideo').src = "#";
+    });
+</script>
+
+
+
 <div class="divVideos">
-    
-    <div id='loading'><img src="Data/Sites/1/skins/Theme_C21/images/loading.gif" alt="Page is loading..." height="64" width="64"></div>
-    <div class="divHomePageVideos" id="divKaltura_play_Video">
-        <iframe id="myvideo" src="#" frameborder="0" style="position: relative; height: 100%; width: 100%; display:inline-table;"></iframe>
-       <%-- <a id="videoName" href="#"></a>--%>
+
+    <div id='loading' style="width: 100%; display: block !important">
+        <div class="divHomePageVideosWithNames">
+            <table class="fullWidth">
+                <tbody id="kaltura_media_subtable"></tbody>
+            </table>
+        </div>
     </div>
-    
-    <br />
-    <div class="divHomePageVideosWithNames">
-        <table class="fullWidth">
-            <tbody id="kaltura_media_subtable"></tbody>
-        </table>
-    </div>
-    <br />
-    <div class="kalturaMoreVideos"> <a href="/how-to-videos" >More Videos >> </a> </div>
 </div>
+<div class="kalturaMoreVideos"><a href="/how-to-videos">More Videos >></a></div>
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2 id="modalHeader"></h2>
+        </div>
+        <div class="modal-body">
+            <div class="divHomePageVideos" id="divKaltura_play_Video">
+                <iframe id="myvideo" src="#" frameborder="0" style="position: relative; height: 100%; width: 100%; display: inline-table;"></iframe>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <h3>&nbsp;</h3>
+        </div>
+    </div>
+
+</div>
+
+
