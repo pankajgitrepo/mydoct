@@ -178,12 +178,12 @@
                 </header>
 
                 <% if (Request.IsAuthenticated)
-                    { %>
+                   { %>
                 <div class="topnavwrapsignin" style="top: 74px; margin-left: 900px;">
 
                     <% }
-                        else
-                        { %>
+                   else
+                   { %>
                     <div class="topnavwrapsignin" style="top: 93px; margin-left: 900px;">
                         <% } %>
 
@@ -191,9 +191,7 @@
                         <div class="topnav1">
                             <%-- <portal:WelcomeMessage ID="WelcomeMessage" runat="server" RenderAsListItem="true" ListItemCss="firstnav" />
                     <portal:UserProfileLink ID="UserProfileLink" runat="server" RenderAsListItem="true" />--%>
-                            <div class="UnAuthenticatedMessage">
-                                <portal:UnAuthenticatedMessage ID="UnAuthenticatedMessage" runat="server" RenderAsListItem="false" />
-                            </div>
+                            <div class="UnAuthenticatedMessage"><portal:UnAuthenticatedMessage ID="UnAuthenticatedMessage" runat="server" RenderAsListItem="false" /></div>
                             <portal:LoginLink ID="LoginLink" runat="server" RenderAsListItem="true" />
                             <portal:Century21_LogOut ID="Century21_LogOut" runat="server" RenderAsListItem="true" />
                             <%-- <portal:LogoutLink ID="LogoutLink" runat="server" RenderAsListItem="true" />--%>
@@ -247,26 +245,22 @@
 
 
                                     <div class="socialftrlinks">
-
                                         <p>
 
                                             <portal:JoinCentury21 ID="JoinCentury21" runat="server"></portal:JoinCentury21>
                                             |
              <%--   <portal:OurMission ID="OurMission" runat="server"></portal:OurMission>
                                             |--%>
-                                            <portal:Link ID="Link" runat="server"></portal:Link>
+                <portal:Link ID="Link" runat="server"></portal:Link>
                                             |
                                     <portal:TermsOfUse ID="TermsOfUslink" runat="server"></portal:TermsOfUse>
                                             <%--<portal:sitemaplink id="SiteMapLink1" runat="server" cssclass="sitemaplink"></portal:sitemaplink>
 				<portal:skinpreview id="SkinPreview1" runat="server"></portal:skinpreview>--%>
                                             <%--|--%>
                                         </p>
-
-                                        <span style="float: right; margin-top: -120px">
-                                            <img src="/data/sites/1/skins/Theme_C21/images/logo-seal-2.png" style="height: 50px; width: 50px" /></span>
                                     </div>
                                     <div id="socialdiv" class="footersocical">
-                                        <%--  <portal:FooterFaceBook ID="FooterTwitter1" runat="server"></portal:FooterFaceBook>
+                                      <%--  <portal:FooterFaceBook ID="FooterTwitter1" runat="server"></portal:FooterFaceBook>
                                         <portal:FooterTwitter ID="TwitterFooter1" runat="server"></portal:FooterTwitter>--%>
 
                                         <%--<portal:FooterLinkedin ID="FooterLinkedin1" runat="server"></portal:FooterLinkedin>--%>

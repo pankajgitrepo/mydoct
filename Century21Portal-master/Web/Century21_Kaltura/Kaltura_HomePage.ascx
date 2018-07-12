@@ -264,7 +264,7 @@
     $(document).on("click", ".close", function () {
         var modal = $("#myModal");
         $(modal).css({ display: "none" });
-        $('#myvideo').src = "#";
+        $('#myvideo').attr('src', '#');
     });
 </script>
 
