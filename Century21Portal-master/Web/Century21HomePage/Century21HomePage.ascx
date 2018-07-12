@@ -297,7 +297,7 @@
     </div>
     <div class="divnh" style="width: 33%;">
         <div class="watchheader">
-            <div>Trainer Pathway</div>
+            <div>C21 University News</div>
         </div>
         <div style="width: 100%;">
             <div style="width: 100%; height: 200px; overflow: auto">
