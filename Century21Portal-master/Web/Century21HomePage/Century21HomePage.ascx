@@ -43,56 +43,57 @@
                 width: 100%;
             }
 
-            /* The sticky class is added to the header with JS when it reaches its scroll position */
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
+    /* The sticky class is added to the header with JS when it reaches its scroll position */
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
 
-.sticky + .art-layout-wrapper {
-  padding-top: 150px;
-}
+        .sticky + .art-layout-wrapper {
+            padding-top: 150px;
+        }
 
     .art-layout-wrapper {
         margin: -35px auto !important;
     }
-    .nivo-controlNav{
-        display:none;
-        z-index:99 !important;
+
+    .nivo-controlNav {
+        display: none;
+        z-index: 99 !important;
     }
 </style>
 
 
 <script>
-$(".art-sheet").attr("id","myHeader");
-$(".art-nav").attr("id","myHeader1");
-$(".art-layout-wrapper").attr("id","content");
+    $(".art-sheet").attr("id", "myHeader");
+    $(".art-nav").attr("id", "myHeader1");
+    $(".art-layout-wrapper").attr("id", "content");
 
-$('<div/>', {
-    id: 'headerNav',
-    style:'z-index:100'
-}).insertBefore('#content');
+    $('<div/>', {
+        id: 'headerNav',
+        style: 'z-index:100'
+    }).insertBefore('#content');
 
-$("#headerNav").append($("#myHeader"));
-$("#headerNav").append($("#myHeader1"));
+    $("#headerNav").append($("#myHeader"));
+    $("#headerNav").append($("#myHeader1"));
 
 
-window.onscroll = function() {myFunction()};
+    window.onscroll = function () { myFunction() };
 
-var header = document.getElementById("headerNav");
+    var header = document.getElementById("headerNav");
 
-var sticky = header.offsetTop;
+    var sticky = header.offsetTop;
 
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-	
-  } else {
-    header.classList.remove("sticky");
-	
-  }
-}
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+
+        } else {
+            header.classList.remove("sticky");
+
+        }
+    }
 </script>
 
 
@@ -186,7 +187,7 @@ function myFunction() {
 
 <%--<portal:NivoSlider ID="NivoSlider1" runat="server" ImageFolder='~/Data/Sites/1/media/nivoimages' ImageWidth='100%' CssClass="nivocustomclass" Config="effect: 'fade'" />--%>
 <%--="http://cdnapi.kaltura.com/p/1424291/sp/142429100/embedIframeJs/uiconf_id/28657531/partner_id/1424291?iframeembed=true&playerId=divKaltura_play_Video&entry_id=0_5u6iyyxy&flashvars[autoPlay]=true" >--%>
-<div class="slider-wrapper theme-default">
+<div class="slider-wrapper theme-default" style="margin-top: -10px;">
     <div id="slider" class="nivoSlider">
 
         <a class="cbVideoIframe" id="infoVideo" href="#">
@@ -200,7 +201,7 @@ function myFunction() {
     </div>
 </div>
 
-<div class="homepagetablepadding theme-default" style="padding-top: 10px;">
+<div class="homepagetablepadding theme-default" style="padding-top: 0px;">
     <div class="divnh">
         <div class="salesAssoheader">
             <div>Sales Assocoate Pathway</div>
@@ -233,45 +234,43 @@ function myFunction() {
     </div>
 </div>
 
-
-<div class="homepagetablepadding" style="padding-top: 15px;">
-    <div class="divnh" style="padding-bottom:15px">
+<div class="homepagetablepadding" style="padding-top: 10px;">
+    <div class="divnh" style="padding-bottom: 15px">
         <div class="watchheader">
             <%--<%= Resources.Resource.Century21HomePageEventNews %>--%>
             <div>Upcoming webinars</div>
         </div>
         <div style="width: 100%;">
-            <div style="width: 100%; height: 200px;">
+            <div style="width: 100%; max-height: 200px; overflow-y: auto">
                 <%--<portal:ModuleWrapper ID="ModuleWrapper1" runat="server" ConfigureModuleId="121" />--%>
-                <asp:Panel ID="ListTemplate" runat="server" style="padding-top:10px">
-    <asp:Panel ID="pnlGridView" runat="server">
-        <asp:Repeater ID="rptSchedule" runat="server" ClientIDMode="Static">
-            <HeaderTemplate>
-                <div class="datagrid">
-                    <table>
-                        <thead>
-                          
-                        </thead>
-                        <tbody>
-            </HeaderTemplate>
-            <ItemTemplate>
-                <tr>
-                     <td class="right black" style="text-decoration: underline" id='<%# Eval("ScheduleId").ToString() %>'> <a href="/classes"> <%# Eval("Title").ToString()%> </a> </td>
-                </tr>
-            </ItemTemplate>
-            <FooterTemplate>
-                </tbody>
+                <asp:Panel ID="ListTemplate" runat="server" Style="padding-top: 10px">
+                    <asp:Panel ID="pnlGridView" runat="server">
+                        <asp:Repeater ID="rptSchedule" runat="server" ClientIDMode="Static">
+                            <HeaderTemplate>
+                                <div class="datagrid">
+                                    <table>
+                                        <thead>
+                                        </thead>
+                                        <tbody>
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <tr>
+                                    <td class="right black" style="text-decoration: underline" id='<%# Eval("ScheduleId").ToString() %>'><a href="/classes"><%# Eval("Title").ToString()%> </a></td>
+                                </tr>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                </tbody>
                     </table>
                     </div>
-            </FooterTemplate>
-        </asp:Repeater>
-    </asp:Panel>
-</asp:Panel>
+                            </FooterTemplate>
+                        </asp:Repeater>
+                    </asp:Panel>
+                </asp:Panel>
             </div>
         </div>
     </div>
-    
-    <div class="divnh" style="padding-bottom:15px">
+
+    <div class="divnh" style="padding-bottom: 15px">
         <div class="newsheader">
             <%--<%= Resources.Resource.Century21HomePageEventSocial %>--%>
             <div>C21 Workplace</div>
@@ -294,8 +293,8 @@ function myFunction() {
                 });
             </script>--%>
     </div>
-    
-    <div class="divnh"  style="width: 34%;padding-bottom:15px">
+
+    <div class="divnh" style="width: 34%; padding-bottom: 15px">
         <div class="socialeventsTabs">
 
             <ul class="tabs-menu">
@@ -316,7 +315,7 @@ function myFunction() {
                     <div class="tab" style="width: 100%;">
                         <div id="tab-1" class="tab-content" style="width: 100%;">
 
-                            <div id="newsContent" class="" style="color: black; width: 100%; margin-top: 2px; overflow-y: scroll !important; height:200px">
+                            <div id="newsContent" class="" style="color: black; width: 100%; margin-top: 2px; overflow-y: scroll !important; height: 200px">
 
                                 <portal:ModuleWrapper ID="mdl100" runat="server" ConfigureModuleId="100" />
                             </div>
@@ -331,7 +330,8 @@ function myFunction() {
     </div>
 
 </div>
-<div class="divwh" style="padding-bottom:15px">
+
+<div class="divwh" style="padding-bottom: 15px">
     <div class="watchheader">
         <div><%= Resources.Resource.Century21HomePageEventWatch %></div>
     </div>
