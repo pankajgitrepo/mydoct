@@ -2,6 +2,7 @@
 <%@ Register Src="~/CustomEventCalendar/HomePageEventsDisplay.ascx" TagPrefix="portal" TagName="HomePageEventsDisplay" %>
 <%@ Register Src="~/Century21_Kaltura/Kaltura_HomePage.ascx" TagPrefix="Century21" TagName="KalturaVideoPlayer" %>
 
+
 <script src="ClientScript/jqmojo/jquery.nivo.slider.pack3-2.js" type="text/javascript"></script>
 <style>
     /*.clearfix .pvs. phm {
@@ -234,25 +235,49 @@ function myFunction() {
 
 
 <div class="homepagetablepadding" style="padding-top: 15px;">
-    <div class="divnh">
+    <div class="divnh" style="padding-bottom:15px">
         <div class="watchheader">
             <%--<%= Resources.Resource.Century21HomePageEventNews %>--%>
             <div>Upcoming webinars</div>
         </div>
         <div style="width: 100%;">
-            <div style="width: 100%; height: 200px; overflow: auto">
-                <portal:ModuleWrapper ID="ModuleWrapper1" runat="server" ConfigureModuleId="121" />
+            <div style="width: 100%; height: 200px;">
+                <%--<portal:ModuleWrapper ID="ModuleWrapper1" runat="server" ConfigureModuleId="121" />--%>
+                <asp:Panel ID="ListTemplate" runat="server" style="padding-top:10px">
+    <asp:Panel ID="pnlGridView" runat="server">
+        <asp:Repeater ID="rptSchedule" runat="server" ClientIDMode="Static">
+            <HeaderTemplate>
+                <div class="datagrid">
+                    <table>
+                        <thead>
+                          
+                        </thead>
+                        <tbody>
+            </HeaderTemplate>
+            <ItemTemplate>
+                <tr>
+                     <td class="right black" style="text-decoration: underline" id='<%# Eval("ScheduleId").ToString() %>'> <a href="/classes"> <%# Eval("Title").ToString()%> </a> </td>
+                </tr>
+            </ItemTemplate>
+            <FooterTemplate>
+                </tbody>
+                    </table>
+                    </div>
+            </FooterTemplate>
+        </asp:Repeater>
+    </asp:Panel>
+</asp:Panel>
             </div>
         </div>
     </div>
     
-    <div class="divnh" style="">
+    <div class="divnh" style="padding-bottom:15px">
         <div class="newsheader">
             <%--<%= Resources.Resource.Century21HomePageEventSocial %>--%>
             <div>C21 Workplace</div>
         </div>
         <div class="HomePageNewsFeed newseventscontent" style="width: 100%;">
-            <div class="fb-page" data-href="https://www.facebook.com/century21" data-width="340" data-height="450" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false" data-show-posts="true">
+            <div class="fb-page" data-href="https://www.facebook.com/century21" data-width="340" data-height="200" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false" data-show-posts="true">
                 <div class="fb-xfbml-parse-ignore">
                     <blockquote cite="https://www.facebook.com/century21">
                         <a href="https://www.facebook.com/century21">C21 University</a>
@@ -270,7 +295,7 @@ function myFunction() {
             </script>--%>
     </div>
     
-    <div class="divnh"  style="width: 34%;">
+    <div class="divnh"  style="width: 34%;padding-bottom:15px">
         <div class="socialeventsTabs">
 
             <ul class="tabs-menu">
@@ -291,7 +316,7 @@ function myFunction() {
                     <div class="tab" style="width: 100%;">
                         <div id="tab-1" class="tab-content" style="width: 100%;">
 
-                            <div id="newsContent" class="" style="color: black; width: 100%; margin-top: 2px; overflow-y: scroll!important; height: 378px;">
+                            <div id="newsContent" class="" style="color: black; width: 100%; margin-top: 2px; overflow-y: scroll !important; height:200px">
 
                                 <portal:ModuleWrapper ID="mdl100" runat="server" ConfigureModuleId="100" />
                             </div>
@@ -306,7 +331,7 @@ function myFunction() {
     </div>
 
 </div>
-<div class="divwh" style="">
+<div class="divwh" style="padding-bottom:15px">
     <div class="watchheader">
         <div><%= Resources.Resource.Century21HomePageEventWatch %></div>
     </div>

@@ -3268,6 +3268,7 @@
     <Content Include="Redirect.aspx" />
     <Content Include="robots.txt" />
     <Content Include="SchedulePage\SchedulePage.ascx" />
+    <Content Include="SchedulePage\UpComingWebinars.ascx" />
     <Content Include="Scripts\AjaxControlToolkit\Debug\Accordion.debug.js" />
     <Content Include="Scripts\AjaxControlToolkit\Debug\AjaxFileUpload.debug.js" />
     <Content Include="Scripts\AjaxControlToolkit\Debug\AlwaysVisibleControl.debug.js" />
@@ -7752,6 +7753,13 @@
     </Compile>
     <Compile Include="SchedulePage\SchedulePage.ascx.designer.cs">
       <DependentUpon>SchedulePage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SchedulePage\UpComingWebinars.ascx.cs">
+      <DependentUpon>UpComingWebinars.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchedulePage\UpComingWebinars.ascx.designer.cs">
+      <DependentUpon>UpComingWebinars.ascx</DependentUpon>
     </Compile>
     <Compile Include="SearchEngineInfo.ashx.cs">
       <DependentUpon>SearchEngineInfo.ashx</DependentUpon>

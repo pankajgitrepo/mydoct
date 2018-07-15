@@ -40,13 +40,31 @@ namespace mojoPortal.Web.Century21HomePage {
         protected global::mojoPortal.Web.ModuleWrapper mdl121;
         
         /// <summary>
-        /// ModuleWrapper1 control.
+        /// ListTemplate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::mojoPortal.Web.ModuleWrapper ModuleWrapper1;
+        protected global::System.Web.UI.WebControls.Panel ListTemplate;
+        
+        /// <summary>
+        /// pnlGridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlGridView;
+        
+        /// <summary>
+        /// rptSchedule control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptSchedule;
         
         /// <summary>
         /// mdl100 control.

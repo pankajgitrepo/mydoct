@@ -281,7 +281,7 @@
         </div>
     </div>
 </div>
-<div class="kalturaMoreVideos"><a href="/how-to-videos">More Videos >></a></div>
+<div class="kalturaMoreVideos" style="padding-bottom: 20px;"><a href="/how-to-videos">More Videos >></a></div>
 <div id="myModal" class="modal">
 
     <!-- Modal content -->
