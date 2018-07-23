@@ -3173,7 +3173,7 @@ th.headerSortUp {
 
 .divnh {
     float: left;
-    width: 33%;
+    width: 33%;    
 }
 /* Home Page CSS End */
 
@@ -3978,7 +3978,7 @@ ul.relatedposts, ul.blognav {
 
 .divHomePageVideosWithNames {
     width: 100% !important;
-    height: 240px !important;
+    height: 230px !important;
     overflow-y: scroll !important;
 }
 
@@ -5255,6 +5255,7 @@ tr.PagerCss {text-align:center!important;
     float: right;
     color: #1F689C;
     font-weight: bold;
+    margin-bottom:20px;
 }
 
 .lnkLogin {
