@@ -136,7 +136,7 @@ div.topnavwrapsignin { position:absolute; top:6.2%; right: 17px; color:#FFF; mar
 .selectedcrumb { font-weight:700; }
 .modulepager { vertical-align:top; padding:4px; }
 .modulepager, .ModulePager, .PageInfo, .SelectedPage, .pageditlinks a { font-size: 18px; }
-.buttonlink { background-color:transparent; color:#03F; cursor:pointer; text-decoration:underline; font-size:13px; border-style:none; padding-left: 0px; text-align:left; padding-bottom:5px;}
+.buttonlink { background-color:transparent; color:#808285; cursor:pointer; text-decoration:underline; font-size:13px; border-style:none; padding-left: 0px; text-align:left; padding-bottom:5px;}
 .mediaedit .buttonlink { color:white; }
 .forumthread .modulepager { clear: both; }
 

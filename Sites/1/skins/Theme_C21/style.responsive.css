@@ -418,9 +418,9 @@
    width: auto !important;
    min-width: 240px !important;
    max-width: none !important;
-   margin-right: 1% !important;
+   /*margin-right: 1% !important;
    margin-left: 1% !important;
-   margin-top: 1% !important;
+   margin-top: 1% !important;*/
 }
 
 #art-resp {

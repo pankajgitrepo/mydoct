@@ -1795,7 +1795,8 @@ pre {
     bottom: 2px;
     position: relative;
     display: inline-block;
-    vertical-align: middle;
+    /*vertical-align: middle;*/
+    font-size: 25px;
     /* font-size: 0; *
     line-height: 0;
 }
@@ -5312,8 +5313,8 @@ tr.PagerCss {text-align:center!important;
 }
 
 .info {
-    color: #00529B;
-    background-color: #BDE5F8;
+    color: #fff;
+    background-color: #808285;
     background-image: url('images/info.png');
 }
 
