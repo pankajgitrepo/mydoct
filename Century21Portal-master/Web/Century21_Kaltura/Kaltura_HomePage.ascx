@@ -98,7 +98,7 @@
     .modal-header {
         padding: 5px 16px;
         /*background-color: #5cb85c;*/
-        color: white;
+        color: black;
     }
 
     .modal-body {
