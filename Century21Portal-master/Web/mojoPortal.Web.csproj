@@ -3216,6 +3216,7 @@
     <Content Include="DesignTools\MasterPageEditor.aspx" />
     <Content Include="DesignTools\SkinFileEditor.aspx" />
     <Content Include="DesignTools\SkinList.aspx" />
+    <Content Include="Images\Century21-C21-logo-2018-1-1-640x480.png" />
     <Content Include="Images\Details.PNG" />
     <Content Include="Dialog\GlobalContentDialog.aspx" />
     <Content Include="Dialog\ParentPageDialog.aspx" />

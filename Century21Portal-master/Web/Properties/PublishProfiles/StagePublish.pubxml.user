@@ -132,7 +132,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/02/2018 00:43:28</publishTime>
     </File>
     <File Include="Admin/ModuleSettings.aspx">
-      <publishTime>07/02/2018 00:43:28</publishTime>
+      <publishTime>07/28/2018 17:41:53</publishTime>
     </File>
     <File Include="Admin/Monitor.aspx">
       <publishTime>07/02/2018 00:43:28</publishTime>
@@ -2967,13 +2967,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/02/2018 00:43:28</publishTime>
     </File>
     <File Include="bin/mojoPortal.Business.dll">
-      <publishTime>07/16/2018 04:14:41</publishTime>
+      <publishTime>07/29/2018 10:14:09</publishTime>
     </File>
     <File Include="bin/mojoPortal.Business.WebHelpers.dll">
-      <publishTime>07/16/2018 04:14:41</publishTime>
+      <publishTime>07/29/2018 10:14:09</publishTime>
     </File>
     <File Include="bin/mojoPortal.Data.dll">
-      <publishTime>07/16/2018 04:14:38</publishTime>
+      <publishTime>07/29/2018 10:14:07</publishTime>
     </File>
     <File Include="bin/mojoPortal.Features.Business.dll">
       <publishTime>07/02/2018 00:43:28</publishTime>
@@ -2985,22 +2985,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/02/2018 00:43:28</publishTime>
     </File>
     <File Include="bin/mojoPortal.Net.dll">
-      <publishTime>07/16/2018 04:14:39</publishTime>
+      <publishTime>07/29/2018 10:14:07</publishTime>
     </File>
     <File Include="bin/mojoPortal.Web.Controls.dll">
-      <publishTime>07/16/2018 04:14:39</publishTime>
+      <publishTime>07/29/2018 10:14:08</publishTime>
     </File>
     <File Include="bin/mojoPortal.Web.dll">
-      <publishTime>07/16/2018 04:14:49</publishTime>
+      <publishTime>07/29/2018 10:14:16</publishTime>
     </File>
     <File Include="bin/mojoPortal.Web.dll.config">
       <publishTime>07/09/2018 13:02:18</publishTime>
     </File>
     <File Include="bin/mojoPortal.Web.Editor.dll">
-      <publishTime>07/16/2018 04:14:38</publishTime>
+      <publishTime>07/29/2018 10:14:07</publishTime>
     </File>
     <File Include="bin/mojoPortal.Web.Framework.dll">
-      <publishTime>07/16/2018 04:14:38</publishTime>
+      <publishTime>07/29/2018 10:14:07</publishTime>
     </File>
     <File Include="bin/Mono.Security.dll">
       <publishTime>07/02/2018 00:43:28</publishTime>
@@ -3225,13 +3225,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/02/2018 00:43:28</publishTime>
     </File>
     <File Include="Century21HomePage/Century21HomePage.ascx">
-      <publishTime>07/16/2018 04:20:35</publishTime>
+      <publishTime>07/28/2018 12:24:51</publishTime>
     </File>
     <File Include="Century21HomePage/Century21HomePage.ascx.cs">
       <publishTime>07/16/2018 02:47:57</publishTime>
     </File>
     <File Include="Century21HomePage/Century21HomePage.ascx.designer.cs">
-      <publishTime>07/16/2018 02:47:08</publishTime>
+      <publishTime>07/28/2018 12:24:52</publishTime>
     </File>
     <File Include="Century21HomePage/Century21HomePage.ascx.orig">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -3261,7 +3261,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/02/2018 00:43:28</publishTime>
     </File>
     <File Include="Century21_Kaltura/Kaltura_HomePage.ascx">
-      <publishTime>07/16/2018 03:39:38</publishTime>
+      <publishTime>07/29/2018 09:54:13</publishTime>
     </File>
     <File Include="Century21_Kaltura/Kaltura_HomePage.ascx.cs">
       <publishTime>07/02/2018 00:43:28</publishTime>
@@ -8637,7 +8637,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/02/2018 00:43:28</publishTime>
     </File>
     <File Include="Controls/FeatureCourseList.ascx">
-      <publishTime>07/08/2018 00:50:03</publishTime>
+      <publishTime>07/29/2018 09:09:12</publishTime>
     </File>
     <File Include="Controls/FeatureCourseList.ascx.cs.orig">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -22482,7 +22482,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/02/2018 00:43:28</publishTime>
     </File>
     <File Include="Data/style/nivoslider/default/default.css">
-      <publishTime>07/02/2018 00:43:28</publishTime>
+      <publishTime>07/28/2018 14:22:49</publishTime>
     </File>
     <File Include="Data/style/nivoslider/default/loading.gif">
       <publishTime>07/02/2018 00:43:28</publishTime>
@@ -22895,6 +22895,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="ImageGallery/upload.ashx">
       <publishTime>07/02/2018 00:43:28</publishTime>
     </File>
+    <File Include="Images/Century21-C21-logo-2018-1-1-640x480.png">
+      <publishTime>07/29/2018 10:11:00</publishTime>
+    </File>
     <File Include="Images/Details.PNG">
       <publishTime>07/02/2018 00:43:28</publishTime>
     </File>
@@ -23232,7 +23235,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/02/2018 23:10:55</publishTime>
     </File>
     <File Include="Properties/PublishProfiles/StagePublish.pubxml.user">
-      <publishTime>07/16/2018 04:16:56</publishTime>
+      <publishTime>07/29/2018 10:36:21</publishTime>
     </File>
     <File Include="QueryStringTextFile/QueryString.txt">
       <publishTime>07/02/2018 00:43:28</publishTime>
@@ -26199,7 +26202,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/02/2018 00:43:28</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>07/16/2018 04:15:37</publishTime>
+      <publishTime>07/29/2018 10:15:18</publishTime>
     </File>
     <File Include="Web.config.orig">
       <publishTime>06/08/2015 11:43:39</publishTime>

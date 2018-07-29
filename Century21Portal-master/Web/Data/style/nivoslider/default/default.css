@@ -162,13 +162,14 @@ Supports Thumbs: true
 }
 
 .nivo-directionNav a {
+    border-radius:40px;
 	display:block;
 	width:30px;
 	height:30px;
-	background:url('arrows.png') no-repeat;
+	background:url('arrows.png') no-repeat #808080;
 	text-indent:-9999px;
 	border:0;
-	opacity: 0;
+	opacity: 100 !important;
 	-webkit-transition: all 200ms ease-in-out;
     -moz-transition: all 200ms ease-in-out;
     -o-transition: all 200ms ease-in-out;

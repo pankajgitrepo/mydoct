@@ -20,7 +20,7 @@
                                     <mp:SiteLabel ID="lblCourseName" runat="server" ForControl="txtCourseName" CssClass="settinglabel"
                                         ConfigKey="CourseListCourseNameLabel"></mp:SiteLabel>
                                     <asp:TextBox ID="txtCourseName" runat="server" TabIndex="10" Columns="45" MaxLength="100"
-                                        CssClass="forminput widetextbox"></asp:TextBox><span style="color:red">*</span>
+                                        CssClass="forminput widetextbox"></asp:TextBox><span style="color:red; padding-left:5px; font-size:14px;">*</span>
                                     <asp:RequiredFieldValidator ID="reqTxtCourseName" runat="server" ControlToValidate="txtCourseName" ValidationGroup="save"
                                         ErrorMessage=" Required field"></asp:RequiredFieldValidator>
                                 </div>
@@ -36,7 +36,7 @@
                                     <%--<asp:TextBox ID="txtLeadInstr" runat="server" TabIndex="10" Columns="45" MaxLength="50"
                                         CssClass="forminput widetextbox"></asp:TextBox>--%>
                                     <asp:DropDownList ID="ddlLeadInstructor" CssClass="dropdown" runat="server" DataValueField="Id" DataTextField="Title">
-                                    </asp:DropDownList><span style="color:red">*</span>
+                                    </asp:DropDownList><span style="color:red; padding-left:5px; font-size:14px;">*</span>
                                     <asp:RequiredFieldValidator ID="reqLeadInstructor" runat="server" ControlToValidate="ddlLeadInstructor" ValidationGroup="save"
                                         ErrorMessage=" Required field"></asp:RequiredFieldValidator>
                                 </div>
@@ -257,7 +257,7 @@
                                         <table border="0" cellspacing="0px" cellpadding="0px" style="width: 100%;">
                                             <tr>
                                                 <td colspan="6" class="tdNoBorder">
-                                                    <%# (Eval("Active").ToString()=="0")?"<img src='Data\\Sites\\1\\skins\\Theme_C21\\images\\inactive.png' title='Inactive course' style='float:left;'/>":"" %>
+                                                    <%# (Eval("Active").ToString()=="0")?"<img src='Data\\Sites\\1\\skins\\Theme_C21\\images\\inactive.png' title='Inactive course' style='float:left; padding-top:8px'/>":"" %>
                                                     <div class="courseListHeader">
 
                                                         <span class="courseTitle"><%# Eval("CourseName").ToString()%></span>

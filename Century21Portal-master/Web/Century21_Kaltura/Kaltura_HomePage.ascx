@@ -82,7 +82,7 @@
 
     /* The Close Button */
     .close {
-        color: white;
+        color: #000;
         float: right;
         font-size: 28px;
         font-weight: bold;
@@ -97,7 +97,7 @@
 
     .modal-header {
         padding: 5px 16px;
-        background-color: #5cb85c;
+        /*background-color: #5cb85c;*/
         color: white;
     }
 
@@ -107,7 +107,7 @@
 
     .modal-footer {
         padding: 5px 16px;
-        background-color: #5cb85c;
+        background-color: #fff;
         color: white;
     }
 
@@ -258,7 +258,7 @@
         var modal = $("#myModal");
         $(modal).css({ display: "block" });
         var vedioName = $(this)[0].attributes.data.nodeValue;
-        $("#modalHeader").text(vedioName);
+        $("#modalHeader").text("How To vedio > Channel Name -" + vedioName + "> Play Vedio");
         $(this).find("a").click();
     });
 

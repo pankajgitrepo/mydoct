@@ -229,6 +229,20 @@
         <div style="width: 100%;">
             <div style="width: 100%; height: 200px; overflow: auto">
                 <portal:ModuleWrapper ID="mdl121" runat="server" ConfigureModuleId="121" />
+
+               <%-- <div class="tab" style="width: 100%;">
+                        <div id="tab-3" class="tab-content" style="width: 100%;">
+
+                            <div id="newsContent1" class="" style="color: black; width: 100%; margin-top: 2px; overflow-y: scroll !important; height: 200px">
+
+                                <portal:ModuleWrapper ID="ModuleWrapper1" runat="server" ConfigureModuleId="100" />
+                            </div>
+                        </div>
+                        <div id="tab-4" class="tab-content" style="width: 100%;">
+                            <portal:HomePageEventsDisplay runat="server" ID="HomePageEventsDisplay1" />
+                        </div>
+                    </div>--%>
+
             </div>
         </div>
     </div>
