@@ -112,7 +112,7 @@ li.firstnav { float:left; list-style-type:none; padding:0 7px 0 5px; }
 .sitelink,a.sitelink:link,a.sitelink:visited { color:inherit; text-decoration: none; font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif; }
 a.sitelink:hover{ text-decoration:underline; }
 
-div.topnavwrapsignin { position:absolute; top:6.2%; right: 17px; color:#FFF; margin:0px 0px 0px 0px; width:26%; z-index:100; padding:5px 0px 7px 10px; }
+div.topnavwrapsignin { position:absolute; top:6.2%; right: 17px; color:#FFF; margin:0px 0px 0px 0px; width:27%; z-index:100; padding:5px 0px 7px 10px; }
 
 .logolist,.pageicons,.skiplink { display:none; }
 

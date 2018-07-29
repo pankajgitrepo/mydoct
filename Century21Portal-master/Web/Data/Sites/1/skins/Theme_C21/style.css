@@ -5010,8 +5010,8 @@ p {
 
 .searchtopnav {
     position: absolute;
-    right: 24%;
-    top: 35px;
+    right: 18%;
+    top: 35px;  
 }
 #ctl00_SearchInputBox1_txtSearch {
     width:198px!important;
@@ -5020,9 +5020,10 @@ p {
 
 
 .needHlptopnav {
-    right: 25%;
+    /*right: 25%;
     position: absolute;
-    top: 8px;
+    top: 8px;*/
+    float:right;
 }
 
 
