@@ -266,7 +266,7 @@
 
                                         <%--<portal:FooterLinkedin ID="FooterLinkedin1" runat="server"></portal:FooterLinkedin>--%>
                                     </div>
-                                    <span style="float:right"><img src="../../../../../Images/Century21-C21-logo-2018-1-1-640x480.png" style="height:100px"/></span>
+                                    <span style="float:right; height: 50px; width: 85px;"><img src="../../../../../Images/Century21-C21-logo-2018-1-1-640x480.png" style="height:100px"/></span>
                                     <%--<portal:FooterYouTube ID="FooterYouTube1" runat="server"></portal:FooterYouTube>--%>
                                     <%--                                    <br />
                                     <br />
