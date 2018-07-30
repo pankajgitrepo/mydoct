@@ -235,6 +235,16 @@
             Compares 2 instances of AuthorizeNetLog.
             </summary>
         </member>
+        <member name="T:mojoPortal.Business.Commerce.MerchantData">
+            <summary>
+             Represents the serialized state we log and use for various payment providers.
+            </summary>
+        </member>
+        <member name="T:mojoPortal.Business.Commerce.OrderStatus">
+            <summary>
+            Represents the status of an order
+            </summary>
+        </member>
         <member name="T:mojoPortal.Business.GoogleCheckoutLog">
             <summary>
             Represents a log of google checkout activity
@@ -362,16 +372,6 @@
         <member name="M:mojoPortal.Business.GoogleCheckoutLog.CompareByAuthExpDate(mojoPortal.Business.GoogleCheckoutLog,mojoPortal.Business.GoogleCheckoutLog)">
             <summary>
             Compares 2 instances of GoogleCheckoutLog.
-            </summary>
-        </member>
-        <member name="T:mojoPortal.Business.Commerce.MerchantData">
-            <summary>
-             Represents the serialized state we log and use for various payment providers.
-            </summary>
-        </member>
-        <member name="T:mojoPortal.Business.Commerce.OrderStatus">
-            <summary>
-            Represents the status of an order
             </summary>
         </member>
         <member name="T:mojoPortal.Business.PaymentLog">
@@ -1240,6 +1240,20 @@
             This class represents the data object for Courses corresponding to table 
             </summary>
         </member>
+        <member name="P:mojoPortal.Business.CourseModule.SiteId">
+            <summary>
+            This is not persisted to the db. It is only set and used when indexing forum threads in the search index.
+            Its a convenience because when we queue the task to index on a new thread we can only pass one object.
+            So we store extra properties here so we don't need any other objects.
+            </summary>
+        </member>
+        <member name="P:mojoPortal.Business.CourseModule.SearchIndexPath">
+            <summary>
+            This is not persisted to the db. It is only set and used when indexing forum threads in the search index.
+            Its a convenience because when we queue the task to index on a new thread we can only pass one object.
+            So we store extra properties here so we don't need any other objects.
+            </summary>
+        </member>
         <member name="M:mojoPortal.Business.CourseModule.GetAllCourses(System.Int32,System.Int32,System.Int32,System.String,System.String,System.Boolean)">
             <summary>
             Returns all PageModules for the given pageID
@@ -1281,20 +1295,6 @@
             </summary>
             <param name="CourseId"></param>
             <returns></returns>
-        </member>
-        <member name="P:mojoPortal.Business.CourseModule.SiteId">
-            <summary>
-            This is not persisted to the db. It is only set and used when indexing forum threads in the search index.
-            Its a convenience because when we queue the task to index on a new thread we can only pass one object.
-            So we store extra properties here so we don't need any other objects.
-            </summary>
-        </member>
-        <member name="P:mojoPortal.Business.CourseModule.SearchIndexPath">
-            <summary>
-            This is not persisted to the db. It is only set and used when indexing forum threads in the search index.
-            Its a convenience because when we queue the task to index on a new thread we can only pass one object.
-            So we store extra properties here so we don't need any other objects.
-            </summary>
         </member>
         <member name="T:mojoPortal.Business.Currency">
              <summary>
@@ -1887,6 +1887,20 @@
             Represents an instance of Html Content
             </summary>
         </member>
+        <member name="P:mojoPortal.Business.HtmlContent.SiteId">
+            <summary>
+            This is not persisted to the db. It is only set and used when indexing forum threads in the search index.
+            Its a convenience because when we queue the task to index on a new thread we can only pass one object.
+            So we store extra properties here so we don't need any other objects.
+            </summary>
+        </member>
+        <member name="P:mojoPortal.Business.HtmlContent.SearchIndexPath">
+            <summary>
+            This is not persisted to the db. It is only set and used when indexing forum threads in the search index.
+            Its a convenience because when we queue the task to index on a new thread we can only pass one object.
+            So we store extra properties here so we don't need any other objects.
+            </summary>
+        </member>
         <member name="M:mojoPortal.Business.HtmlContent.GetHtmlContent(System.Int32)">
             <summary>
             Gets an instance of HtmlContent.
@@ -1930,20 +1944,6 @@
             </summary>
             <param name="siteGuid"></param>
             <param name="publishingUserGuid"></param>
-        </member>
-        <member name="P:mojoPortal.Business.HtmlContent.SiteId">
-            <summary>
-            This is not persisted to the db. It is only set and used when indexing forum threads in the search index.
-            Its a convenience because when we queue the task to index on a new thread we can only pass one object.
-            So we store extra properties here so we don't need any other objects.
-            </summary>
-        </member>
-        <member name="P:mojoPortal.Business.HtmlContent.SearchIndexPath">
-            <summary>
-            This is not persisted to the db. It is only set and used when indexing forum threads in the search index.
-            Its a convenience because when we queue the task to index on a new thread we can only pass one object.
-            So we store extra properties here so we don't need any other objects.
-            </summary>
         </member>
         <member name="T:mojoPortal.Business.ImageHelper">
             <summary>
@@ -2236,6 +2236,11 @@
             Represents urls that have been permanently moved.
             </summary>
         </member>
+        <member name="P:mojoPortal.Business.RedirectInfo.ExpireUtc">
+            <summary>
+            The date that the old url expired or expires
+            </summary>
+        </member>
         <member name="M:mojoPortal.Business.RedirectInfo.GetRedirectList(System.Guid)">
             <summary>
             Gets an instance of RedirectList.
@@ -2310,11 +2315,6 @@
         <member name="M:mojoPortal.Business.RedirectInfo.CompareByExpireUtc(mojoPortal.Business.RedirectInfo,mojoPortal.Business.RedirectInfo)">
             <summary>
             Compares 2 instances of RedirectList.
-            </summary>
-        </member>
-        <member name="P:mojoPortal.Business.RedirectInfo.ExpireUtc">
-            <summary>
-            The date that the old url expired or expires
             </summary>
         </member>
         <member name="F:mojoPortal.Business.RegexHelper.RegexEmailValidationPattern">
@@ -2402,11 +2402,6 @@
             The preferred way to obtasin a reference to SiteSettings object is using mojoPortal.Business.WebHelpers.CacheHelper.GetCurrentSiteSettings();
             </summary>
         </member>
-        <member name="M:mojoPortal.Business.SiteSettings.SyncRelatedSites(mojoPortal.Business.SiteSettings,System.Boolean)">
-            <summary>
-            when using related sites mode this mthod is used to sync shared settings across sites when the parent site is updated
-            </summary>
-        </member>
         <member name="P:mojoPortal.Business.SiteSettings.PreferredHostName">
             <summary>
             In case multiple host names map to your site and you want to force a particular one.
@@ -2437,6 +2432,20 @@
             when a new user registers, if this is true then they cannot login until approved
             </summary>
         </member>
+        <member name="M:mojoPortal.Business.SiteSettings.SyncRelatedSites(mojoPortal.Business.SiteSettings,System.Boolean)">
+            <summary>
+            when using related sites mode this mthod is used to sync shared settings across sites when the parent site is updated
+            </summary>
+        </member>
+        <member name="P:mojoPortal.Business.SiteUser.PasswordHash">
+            <summary>
+            since aspnet identity doesn't directly support salt
+            we have to store the hash, the salt and the format in a single field
+            so our custom hasher will have it
+            http://www.asp.net/identity/overview/migrations/migrating-an-existing-website-from-sql-membership-to-aspnet-identity
+            https://aspnetidentity.codeplex.com/workitem/2333
+            </summary>
+        </member>
         <member name="M:mojoPortal.Business.SiteUser.LoadInstructors(System.Int32)">
             <summary>
             Return users list those who are having Instructor role
@@ -2462,15 +2471,6 @@
         <member name="M:mojoPortal.Business.SiteUser.UpdateTotalRevenue">
             <summary>
             updates the total revenue for all users
-            </summary>
-        </member>
-        <member name="P:mojoPortal.Business.SiteUser.PasswordHash">
-            <summary>
-            since aspnet identity doesn't directly support salt
-            we have to store the hash, the salt and the format in a single field
-            so our custom hasher will have it
-            http://www.asp.net/identity/overview/migrations/migrating-an-existing-website-from-sql-membership-to-aspnet-identity
-            https://aspnetidentity.codeplex.com/workitem/2333
             </summary>
         </member>
         <member name="T:mojoPortal.Business.Statistics.MembershipStatistics">
@@ -2526,6 +2526,17 @@
         <member name="T:mojoPortal.Business.TaskQueue">
             <summary>
             Represents a queue for tasks run on a bcakcground thread
+            </summary>
+        </member>
+        <member name="P:mojoPortal.Business.TaskQueue.UpdateFrequency">
+            <summary>
+            The frequency in seconds at which task status updates are expected.
+            If no update to taskqueue status for within this value the task is considered stalled.
+            </summary>
+        </member>
+        <member name="P:mojoPortal.Business.TaskQueue.CompleteRatio">
+            <summary>
+            A value between 0 and 1 indicating percent complete where 1 = 100%, 0.5 = 50%, etc.
             </summary>
         </member>
         <member name="M:mojoPortal.Business.TaskQueue.GetTaskQueue(System.Guid)">
@@ -2642,17 +2653,6 @@
         <member name="M:mojoPortal.Business.TaskQueue.CompareBySerializedTaskType(mojoPortal.Business.TaskQueue,mojoPortal.Business.TaskQueue)">
             <summary>
             Compares 2 instances of TaskQueue.
-            </summary>
-        </member>
-        <member name="P:mojoPortal.Business.TaskQueue.UpdateFrequency">
-            <summary>
-            The frequency in seconds at which task status updates are expected.
-            If no update to taskqueue status for within this value the task is considered stalled.
-            </summary>
-        </member>
-        <member name="P:mojoPortal.Business.TaskQueue.CompleteRatio">
-            <summary>
-            A value between 0 and 1 indicating percent complete where 1 = 100%, 0.5 = 50%, etc.
             </summary>
         </member>
         <member name="T:mojoPortal.Business.ThreadSleepTask">

@@ -3174,7 +3174,8 @@ th.headerSortUp {
 
 .divnh {
     float: left;
-    width: 33%;
+    width: 32%;
+    border-right:solid #fff;
 }
 /* Home Page CSS End */
 

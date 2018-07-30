@@ -45,11 +45,6 @@
             
             </summary>
         </member>
-        <member name="T:mojoPortal.Business.WebHelpers.PaymentGateway.IPaymentGateway">
-            <summary>
-            
-            </summary>
-        </member>
         <member name="T:mojoPortal.Business.WebHelpers.PaymentGateway.GCheckoutNotificationConfiguration">
             <summary>
              
@@ -76,6 +71,11 @@
             provider in the collection or an error occurs.
             </summary>
         </member>
+        <member name="T:mojoPortal.Business.WebHelpers.PaymentGateway.IPaymentGateway">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:mojoPortal.Business.WebHelpers.PaymentGateway.NotImplementedPaymentGateway">
             <summary>
             This is just a stub that you can copy for a starting point in implementing new gateways
@@ -86,16 +86,6 @@
             <summary>
             This only exists because a provider collection can never be empty
              
-            </summary>
-        </member>
-        <member name="T:mojoPortal.Business.WebHelpers.PaymentGateway.PayPalIPNHandlerProvider">
-            <summary>
-             
-            </summary>
-        </member>
-        <member name="M:mojoPortal.Business.WebHelpers.PaymentGateway.PayPalIPNHandlerProvider.HandleRequest(System.String,System.Collections.Specialized.NameValueCollection,mojoPortal.Business.PayPalLog)">
-            <summary>
-            return true if the transaction was processed with no problems
             </summary>
         </member>
         <member name="M:mojoPortal.Business.WebHelpers.PaymentGateway.DoNothingPayPalIPNHandlerProvider.HandleRequest(System.String,System.Collections.Specialized.NameValueCollection,mojoPortal.Business.PayPalLog)">
@@ -109,17 +99,7 @@
              
             </summary>
         </member>
-        <member name="T:mojoPortal.Business.WebHelpers.PaymentGateway.PayPalPDTHandlerProvider">
-            <summary>
-             
-            </summary>
-        </member>
         <member name="T:mojoPortal.Business.WebHelpers.PaymentGateway.NotImplementedPayPalReturnHandler">
-            <summary>
-             
-            </summary>
-        </member>
-        <member name="T:mojoPortal.Business.WebHelpers.PaymentGateway.PayPalReturnHandlerProvider">
             <summary>
              
             </summary>
@@ -137,31 +117,6 @@
             again then do it from a user button click
             
             </summary>
-        </member>
-        <member name="M:mojoPortal.Business.WebHelpers.PaymentGateway.PayPalExpressGateway.CallSetExpressCheckout">
-            <summary>
-            Pass order info to paypal and recieve back a token
-            then redirect to PayPal passing the token.
-            When PayPal redirects back to your site call
-            GetExpressCheckoutDetails passing the token
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:mojoPortal.Business.WebHelpers.PaymentGateway.PayPalExpressGateway.CallGetExpressCheckoutDetails">
-            <summary>
-            
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:mojoPortal.Business.WebHelpers.PaymentGateway.PayPalExpressGateway.CallDoExpressCheckoutPayment">
-            <summary>
-            DoExpressCheckoutPayment Request
-            Request to obtain payment with PayPal Express Checkout.
-            IMPORTANT: PayPal requires that a merchant using Express Checkout display to the
-            customer the same amount that the merchant sends to PayPal in the AMT
-            parameter with the DoExpressCheckoutPayment request API.
-            </summary>
-            <returns></returns>
         </member>
         <member name="P:mojoPortal.Business.WebHelpers.PaymentGateway.PayPalExpressGateway.PayPalExpressUrl">
             <summary>
@@ -247,6 +202,41 @@
             
             </summary>
         </member>
+        <member name="M:mojoPortal.Business.WebHelpers.PaymentGateway.PayPalExpressGateway.CallSetExpressCheckout">
+            <summary>
+            Pass order info to paypal and recieve back a token
+            then redirect to PayPal passing the token.
+            When PayPal redirects back to your site call
+            GetExpressCheckoutDetails passing the token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mojoPortal.Business.WebHelpers.PaymentGateway.PayPalExpressGateway.CallGetExpressCheckoutDetails">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mojoPortal.Business.WebHelpers.PaymentGateway.PayPalExpressGateway.CallDoExpressCheckoutPayment">
+            <summary>
+            DoExpressCheckoutPayment Request
+            Request to obtain payment with PayPal Express Checkout.
+            IMPORTANT: PayPal requires that a merchant using Express Checkout display to the
+            customer the same amount that the merchant sends to PayPal in the AMT
+            parameter with the DoExpressCheckoutPayment request API.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:mojoPortal.Business.WebHelpers.PaymentGateway.PayPalIPNHandlerProvider">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:mojoPortal.Business.WebHelpers.PaymentGateway.PayPalIPNHandlerProvider.HandleRequest(System.String,System.Collections.Specialized.NameValueCollection,mojoPortal.Business.PayPalLog)">
+            <summary>
+            return true if the transaction was processed with no problems
+            </summary>
+        </member>
         <member name="T:mojoPortal.Business.WebHelpers.PaymentGateway.PayPalIPNHandlerProviderCollection">
             <summary>
              
@@ -266,6 +256,11 @@
              <summary>
             
              </summary>
+        </member>
+        <member name="T:mojoPortal.Business.WebHelpers.PaymentGateway.PayPalPDTHandlerProvider">
+            <summary>
+             
+            </summary>
         </member>
         <member name="T:mojoPortal.Business.WebHelpers.PaymentGateway.PayPalPDTHandlerProviderCollection">
             <summary>
@@ -288,6 +283,11 @@
             </summary>
         </member>
         <member name="T:mojoPortal.Business.WebHelpers.PaymentGateway.PayPalReturnHandlerManager">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:mojoPortal.Business.WebHelpers.PaymentGateway.PayPalReturnHandlerProvider">
             <summary>
              
             </summary>
