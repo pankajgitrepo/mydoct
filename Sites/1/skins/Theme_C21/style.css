@@ -368,10 +368,11 @@ li p, .art-postcontent li p, .art-blockcontent li p {
 }
 
 .art-shapesbottom {
-    background-color: #e4e4e4;
+    /*background-color: #e4e4e4;*/
+    background:url("images/Nav_pattern.png");
     margin: 0 auto;
-    background-repeat: no-repeat;
-    height: 100px;
+    /*background-repeat: no-repeat;*/
+    height: 92px;
     /*, url('images/header.jpg'); */
     background-position: 13px 0px, 0 0;
     position: relative;
@@ -526,7 +527,7 @@ li p, .art-postcontent li p, .art-blockcontent li p {
     top: 94px;
     width: 100%;
     z-index: 100;
-    box-shadow: 0px 5px 5px #bfbfc5;
+    /*box-shadow: 0px 5px 5px #bfbfc5;*/
 }
 
 ul.art-hmenu a, ul.art-hmenu a:link, ul.art-hmenu a:visited, ul.art-hmenu a:hover {
@@ -1884,7 +1885,7 @@ blockquote {
     /*background: #212122;*/
     background-image: url(images/footer.png);
     background-repeat: repeat;
-    margin: 19px auto 0;
+    margin: 10px auto 0;
     position: relative;
     color: #B2AEAE;
     font-size: 11px;
@@ -3174,7 +3175,12 @@ th.headerSortUp {
 
 .divnh {
     float: left;
-    width: 33%;
+    width: 31.6%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border: solid thin #000;
+    box-shadow: 5px 8px #d8990d87;
+    border-radius: 3px;
 }
 /* Home Page CSS End */
 
@@ -4937,15 +4943,15 @@ p {
 }
 
 .imgLogo {
-    background-image: url('images/C21_University_LOGO.png') !important;
-    padding-left: 1024px !important;
-    background-repeat: no-repeat !important;
-    height: 55px !important;
-    width: 360px !important;
-    border: none !important;
-    margin-top: 14px !important;
-    margin-left: 14px !important;
-    position: absolute;
+    /*background-image: url('images/C21_University_LOGO.png') !important;*/
+    /*padding-left: 1024px !important;*/
+    /*background-repeat: no-repeat !important;*/
+    /*height: 55px !important;*/
+    width: 260px !important;
+    /*border: none !important;*/
+    /*margin-top: 14px !important;*/
+    /*margin-left: 14px !important;*/
+    /*position: absolute;*/
 }
 
 .addNewEventsBtn {
@@ -5010,8 +5016,8 @@ p {
 
 .searchtopnav {
     position: absolute;
-    right: 24%;
-    top: 35px;
+    right: 18%;
+    top: 35px;  
 }
 #ctl00_SearchInputBox1_txtSearch {
     width:198px!important;
@@ -5020,9 +5026,10 @@ p {
 
 
 .needHlptopnav {
-    right: 25%;
+    /*right: 25%;
     position: absolute;
-    top: 8px;
+    top: 8px;*/
+    float:right;
 }
 
 

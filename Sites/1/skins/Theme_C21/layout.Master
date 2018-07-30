@@ -85,6 +85,29 @@
             });
         });
     </script>
+    <script>
+    $(function () {
+        var pageIdentity = $(".selectedcrumb");
+        if (pageIdentity.length > 0) {
+            if ($(pageIdentity[0]).text() == "Browse Courses") {
+                $(".breadcrumbs").text("");
+                $(".breadcrumbs").css("background", "url('/Data/Sites/1/skins/Theme_C21/images/Browse_courses.png')");
+            }
+            else if ($(pageIdentity[0]).text() == "How To Videos") {
+                $(".breadcrumbs").text("");
+                $(".breadcrumbs").css("background", "url('/Data/Sites/1/skins/Theme_C21/images/How_to_video.png')");
+            }
+            else if ($(pageIdentity[0]).text() == "Course Schedule") {
+                $(".breadcrumbs").text("");
+                $(".breadcrumbs").css("background", "url('/Data/Sites/1/skins/Theme_C21/images/Course_schedule.png')");
+            }
+            else if ($(pageIdentity[0]).text() == "Learning Resources") {
+                $(".breadcrumbs").text("");
+                $(".breadcrumbs").css("background", "url('/Data/Sites/1/skins/Theme_C21/images/Learning_resources.png')");
+            }
+        }
+    });
+</script>
 </head>
 <body class="pagebody" id="Body" runat="server">
     <div id="dialog-confirm" title="Confirmation?" style="display: none;">
@@ -159,8 +182,8 @@
                         </div>
                     </div>
 
-                    <div class="art-shapesbottom">
-                        <img class="imgLogo" src="" style="" alt="" />
+                    <div class="art-shapesbottom" id="navImage">
+                        <img class="imgLogo" src="/Data/Sites/1/skins/Theme_C21/images/C21_Logo.png" style="" alt="" />
                         <%--<img src="/Data/Sites/1/skins/Theme_C21/images/logo-2.png" style="padding-left: 13px;" alt="" />--%>
                         <%--<div>Where learning means business</div>--%>
                     </div>
