@@ -20,6 +20,7 @@
 
         .panelwrapper {
             margin-top: 35px;
+            margin-bottom: 20px;
         }
 
         .modulecontent {

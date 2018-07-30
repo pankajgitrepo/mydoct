@@ -130,7 +130,12 @@ div.topnavwrapsignin { position:absolute; top:6.2%; right: 17px; color:#FFF; mar
 .albumFloat { float:left; text-align:center; margin-right:8px; margin-bottom:4px; }
 .albumMetaSectionHead { background-color:Gray; color:#FFF; font-weight:700; }
 
-.breadcrumbs { padding:30px 4px 4px 18px; clear:left; }
+/*.breadcrumbs { padding:30px 4px 4px 18px; clear:left; }*/
+.breadcrumbs {
+    padding: 150px 0px 0px 0px;
+    clear: left;
+    margin-top: -6px;
+}
 .breadcrumbs a { color:inherit; }
 .unselectedcrumb { font-weight:400; }
 .selectedcrumb { font-weight:700; }

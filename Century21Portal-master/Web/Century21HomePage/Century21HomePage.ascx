@@ -51,11 +51,11 @@
     }
 
         .sticky + .art-layout-wrapper {
-            padding-top: 150px;
+            padding-top: 110px;
         }
 
     .art-layout-wrapper {
-        margin: -35px auto !important;
+        margin: -10px auto !important;
     }
 
     .nivo-controlNav {
@@ -187,7 +187,7 @@
 
 <%--<portal:NivoSlider ID="NivoSlider1" runat="server" ImageFolder='~/Data/Sites/1/media/nivoimages' ImageWidth='100%' CssClass="nivocustomclass" Config="effect: 'fade'" />--%>
 <%--="http://cdnapi.kaltura.com/p/1424291/sp/142429100/embedIframeJs/uiconf_id/28657531/partner_id/1424291?iframeembed=true&playerId=divKaltura_play_Video&entry_id=0_5u6iyyxy&flashvars[autoPlay]=true" >--%>
-<div class="slider-wrapper theme-default" style="margin-top: -10px;">
+<div class="slider-wrapper theme-default" style="margin-top: -45px;">
     <div id="slider" class="nivoSlider">
 
         <a class="cbVideoIframe" id="infoVideo" href="#">
@@ -222,12 +222,12 @@
             </div>
         </div>
     </div>
-    <div class="divnh" style="width: 34%;">
+    <div class="divnh">
         <div class="watchheader">
             <div>Trainer Pathway</div>
         </div>
         <div style="width: 100%;">
-            <div style="width: 100%; height: 200px; overflow: auto">
+            <div style="width: 100%; height: 190px; overflow: auto">
                 <portal:ModuleWrapper ID="mdl121" runat="server" ConfigureModuleId="121" />
 
                <%-- <div class="tab" style="width: 100%;">
@@ -255,7 +255,7 @@
             <div>Upcoming webinars</div>
         </div>
         <div style="width: 100%;">
-            <div style="width: 100%; max-height: 200px; overflow-y: auto">
+            <div style="width: 100%; height: 200px; overflow-y: auto">
                 <%--<portal:ModuleWrapper ID="ModuleWrapper1" runat="server" ConfigureModuleId="121" />--%>
                 <asp:Panel ID="ListTemplate" runat="server" Style="padding-top: 10px">
                     <asp:Panel ID="pnlGridView" runat="server">
@@ -289,7 +289,7 @@
             <%--<%= Resources.Resource.Century21HomePageEventSocial %>--%>
             <div>C21 Workplace</div>
         </div>
-        <div class="HomePageNewsFeed newseventscontent" style="width: 100%;">
+        <div class="HomePageNewsFeed newseventscontent" style="width: 100%; height:190px">
             <div class="fb-page" data-href="https://www.facebook.com/century21" data-width="340" data-height="200" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false" data-show-posts="true">
                 <div class="fb-xfbml-parse-ignore">
                     <blockquote cite="https://www.facebook.com/century21">
@@ -308,7 +308,7 @@
             </script>--%>
     </div>
 
-    <div class="divnh" style="width: 34%; padding-bottom: 15px">
+    <div class="divnh" style="padding-bottom: 15px">
         <div class="socialeventsTabs">
 
             <ul class="tabs-menu">
@@ -325,7 +325,7 @@
 
                 </div>
                 <div style="clear: both;"></div>
-                <div id="tabs-container" class="newseventscontent" style="width: 100%; float: left;">
+                <div id="tabs-container" class="newseventscontent" style="width: 100%; height:200px; float: left;">
                     <div class="tab" style="width: 100%;">
                         <div id="tab-1" class="tab-content" style="width: 100%;">
 
